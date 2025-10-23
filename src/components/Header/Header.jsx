@@ -1,33 +1,43 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import styled from "styled-components";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const Logo = styled.img`
+    width: 95.33px;
+    height: 67px;
+    left: 120px;
+    top: 14px;
+  `;
+
   return (
-    <header className="bg-white shadow-md fixed w-full z-50">
+    <header className="bg-white shadow-md fixed w-full z-50 position-fixed">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left: Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
-          MyLogo
+          <Logo src="src/assets/header/logo.png" alt="Logo" />
         </Link>
 
         {/* Center: Menu for Desktop */}
         <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
-          <Link to="/" className="hover:text-blue-600 transition">Home</Link>
-          <Link to="/about" className="hover:text-blue-600 transition">About</Link>
-          <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
-          <Link to="/blog" className="hover:text-blue-600 transition">Blog</Link>
+          <Link to="/about" className="hover:text-blue-600 transition font-inter">About Us</Link>
+          <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src="src/assets/header/chevron-down.svg" alt="Chevron Down"/></Link>
+          <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src="src/assets/header/chevron-down.svg" alt="Chevron Down"/></Link>
+          <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
+          {/* <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
+          <Link to="/blog" className="hover:text-blue-600 transition">Blog</Link> */}
         </nav>
 
         {/* Right: Contact Us Button */}
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+            className="border border-black text-black px-5 py-2 hover:bg-black hover:text-white transition"
           >
             Contact Us
           </Link>
