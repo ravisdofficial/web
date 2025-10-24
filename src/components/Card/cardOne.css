@@ -1,0 +1,41 @@
+.leftCard {
+    position: relative;
+}
+
+.rightCard {
+    width: 100%;
+    margin: auto;
+    padding: 0 100px;
+}
+
+.rightCard>img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.rectangle {
+    position: absolute;
+    width: 405px;
+    height: 544px;
+    border: 2px solid black;
+    border-top-left-radius: 1000000px;
+    border-top-right-radius: 1000000px;
+}
+
+.rectangle>img {
+    object-position: right center;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10000px;
+    border-top-right-radius: 10000px;
+}
+
+.card__heading {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.card__desc {
+    color: #FFFFFFB2;
+    font-size: 17px;
+}
