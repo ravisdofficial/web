@@ -16,6 +16,7 @@ const Footer = () => {
 
   return (
     <>
+      <Connect content={"Fulfill your real estate aspirations now"}/>
       <Container className="text-black p-4 mt-auto">
         <div className="container mx-auto px-4 py-10 flex justify-between">
           {/* LeftTop: Logo */}
