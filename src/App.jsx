@@ -1,20 +1,22 @@
-import React from "react";
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routesConfig from "./routesConfig";
+import MainLayout from './components/Layout/MainLayout';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import Home from "./pages/Home";
-
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          {/* <Route path="about" element={<About />} /> */}
-        </Route>
+        {routesConfig.map(({ path, element, meta }) => (
+          <Route
+            key={path}
+            path={path}
+            element={<MainLayout meta={meta}>{element}</MainLayout>}
+          />
+        ))}
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
-export default App;
