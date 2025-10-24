@@ -1,0 +1,49 @@
+.address {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .address {
+        display: flex;
+        flex-direction: column-reverse !important;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        & div {
+            display: flex;
+            justify-content: center !important;
+            text-align: center !important;
+        }
+
+        & div>p {
+            display: flex;
+            justify-content: center !important;
+            text-align: center !important;
+            margin-top: 20px;
+        }
+
+        & div:nth-child(2) {
+            & div {
+                margin: 30px;
+            }
+            & div:nth-child(2) {
+                margin-top: -85px;
+            }
+            & p {
+                display: flex;
+                justify-content: center !important;
+                width: max-content !important;
+                text-align: left !important;
+            }
+        }
+    }
+
+}
