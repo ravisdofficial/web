@@ -17,15 +17,15 @@ const Footer = () => {
   return (
     <>
       <Connect content={"Fulfill your real estate aspirations now"}/>
-      <Container className="text-black p-4 mt-auto">
-        <div className="container mx-auto px-4 py-10 flex justify-between">
+      <Container className="text-black px-4 mt-auto max-h-2">
+        <div className="container mx-auto px-4 py-4 flex justify-between">
           {/* LeftTop: Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-600">
             <Logo src="src/assets/header/logo.png" alt="Logo" />
           </Link>
 
           {/* RightTop: Contact Us Button */}
-          <div className="md:block py-5 text-black px-5 py-2 transition text-left font-poppins">
+          <div className="md:block text-black px-5 py-2 transition text-left font-poppins">
             <p className="mb-5">
               +91 8152 88 33 88
             </p>

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     background-color: #DDD7CB;
-    min-height: 523px;
-    padding: 20px;`
+    min-height: 450px;
+    padding: 0 50px;`
 
 export const Logo = styled.img`
     width: 119px;
@@ -17,7 +17,7 @@ export const LineBreak = styled.hr`
     color: #000;
     display: flex;
     margin: auto;
-    width: 88%;
+    width: 95%;
   `;
 
 export const Mail = styled.p`

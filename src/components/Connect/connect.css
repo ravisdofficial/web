@@ -2,7 +2,6 @@
     background-color: #F2EFEC;
     content: '';
     position: absolute;
-    height: 500px;
     width: 100%;
     top: 0;
     left: 0;
@@ -14,7 +13,7 @@
 .connect-content{
     position: relative;
     text-align: center;
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
