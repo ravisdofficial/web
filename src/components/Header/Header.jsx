@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import styled from "styled-components";
+import LogoImg from '../../assets/header/logo.png';
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left: Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
-          <Logo src="src/assets/header/logo.png" alt="Logo" />
+          <Logo src={LogoImg} alt="Logo" />
         </Link>
 
         {/* Center: Menu for Desktop */}
