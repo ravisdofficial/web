@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <>
       <Connect content={"Fulfill your real estate aspirations now"}/>
-      <Container className="text-black px-4 mt-auto max-h-2">
+      <Container className="text-black px-4 mt-auto">
         <div className="container mx-auto px-4 py-4 flex justify-between">
           {/* LeftTop: Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-600">
@@ -65,7 +65,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className=" py-5 flex flex-row">
+          <div className="othersCont py-5 flex flex-row">
             <div className="md:mx-[40px] flex flex-col font-inter text-left text-sm">
               <FooterItem>About us</FooterItem>
               <FooterItem>Managed Farmlands</FooterItem>
