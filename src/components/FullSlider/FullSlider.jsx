@@ -63,6 +63,7 @@ export default function FullSlider() {
       </div>
     
     </Slider>
+
     </div>
   );
 }
