@@ -8,6 +8,7 @@ export default function About() {
         title="Crafting Spaces, Enriching Lives"
         content="Dive into the world of Vibez Estates, where every property tells a story of luxury, sustainability, and innovation."
         button="Learn More"
+        bgEffect={true}
       />
   );
 }

@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
+// background-image: url(${(props) => props.$bgImage});
 export const BannerDiv = styled.div`
-  background-image: url(${(props) => props.$bgImage});
+   background-image: ${(props) => 
+    props.$effect 
+      ? `linear-gradient(to right, rgb(0 0 0 / 40%) 0%, transparent 50%, rgb(0 0 0 / 51%) 100%), linear-gradient(to bottom, rgb(0 0 0 / 35%) 0%, transparent 50%, rgb(0 0 0 / 45%) 100%), 
+         url(${props.$bgImage})`
+      : `url(${props.$bgImage})`
+  };
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
