@@ -8,7 +8,7 @@ export const VibezSectionContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 50px 0;
     background-color: #F2EFEC;
 
     // ::before{

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import styled from "styled-components";
 import LogoImg from '../../assets/header/logo.png';
-
+import ChevronDown from "/src/assets/header/chevron-down.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +28,8 @@ const Header = () => {
         {/* Center: Menu for Desktop */}
         <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
           <Link to="/about" className="hover:text-blue-600 transition font-inter">About Us</Link>
-          <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src="src/assets/header/chevron-down.svg" alt="Chevron Down" /></Link>
-          <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src="src/assets/header/chevron-down.svg" alt="Chevron Down" /></Link>
+          <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+          <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
           <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
           {/* <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
           <Link to="/blog" className="hover:text-blue-600 transition">Blog</Link> */}
@@ -60,8 +60,8 @@ const Header = () => {
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="flex flex-col p-4 space-y-3 text-gray-700 font-medium">
             <Link to="/" onClick={toggleMenu} className="hover:text-blue-600 transition">Home</Link>
-            <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src="src/assets/header/chevron-down.svg" alt="Chevron Down" /></Link>
-            <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src="src/assets/header/chevron-down.svg" alt="Chevron Down" /></Link>
+            <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+            <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
             <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
             <Link
               to="/contact"
