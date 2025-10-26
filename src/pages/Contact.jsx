@@ -10,11 +10,18 @@ export default function ContactUs() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode: 'onSubmit', reValidateMode: 'onChange'
+
+  });
 
   const onSubmit = (data) => {
     console.log("Form submitted:", data);
     reset();
+  };
+
+  const onError = (errors) => {
+    console.log('Form errors:', errors);
   };
 
   return (
@@ -80,6 +87,7 @@ export default function ContactUs() {
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="relative grid grid-cols-1 gap-6 w-full max-w-[460px] p-10 z-10"
+          noValidate
         >
           <h3 className="text-2xl font-semibold mb-2">Get in touch</h3>
           <p className="text-sm text-gray-600 mb-4">
@@ -87,17 +95,48 @@ export default function ContactUs() {
           </p>
 
           {[
-            { name: "name", label: "Name", type: "text" },
-            { name: "email", label: "Email id", type: "email" },
-            { name: "phone", label: "Phone number", type: "tel" },
-            { name: "project", label: "Project name", type: "text" },
+            {
+              name: "name",
+              label: "Name",
+              type: "text",
+              required: true
+            },
+            {
+              name: "email",
+              label: "Email",
+              type: "email",
+              required: true,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Please enter a valid email address"
+              }
+            },
+            {
+              name: "phone",
+              label: "Phone number",
+              type: "tel",
+              required: true,
+              pattern: {
+                value: /^[0-9]{10}$/,
+                message: "Please enter a valid 10-digit phone number"
+              }
+            },
+            {
+              name: "project",
+              label: "Project name",
+              type: "text",
+              required: true
+            },
           ].map((field) => (
             <div key={field.name}>
               <input
                 type={field.type}
                 placeholder={`${field.label}*`}
-                className="w-full border-b border-gray-400 focus:border-[#6b4b3e] outline-none py-3 bg-transparent placeholder:text-gray-700"
-                {...register(field.name, { required: `${field.label} is required` })}
+                className={`w-full border-b ${errors[field.name] ? 'border-red-500' : 'border-gray-400'} focus:border-[#6b4b3e] outline-none py-3 bg-transparent placeholder:text-gray-700`}
+                {...register(field.name, {
+                  required: `${field.label} is required`,
+                  pattern: field.pattern
+                })}
               />
               {errors[field.name] && (
                 <p className="text-red-500 text-sm mt-1">
@@ -111,11 +150,13 @@ export default function ContactUs() {
             <textarea
               rows="3"
               placeholder="Message*"
-              className="w-full border-b border-gray-400 focus:border-[#6b4b3e] outline-none py-3 bg-transparent resize-none placeholder:text-gray-700"
+              className={`w-full border-b ${errors.message ? 'border-red-500' : 'border-gray-400'} focus:border-[#6b4b3e] outline-none py-3 bg-transparent resize-none placeholder:text-gray-700`}
               {...register("message", { required: "Message is required" })}
             ></textarea>
             {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.message.message}
+              </p>
             )}
           </div>
 
