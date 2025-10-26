@@ -9,7 +9,7 @@ import LuxuryImg from '/src/assets/cards/luxury.webp';
 import ChessImg from '/src/assets/cards/chess.webp';
 import VectorImg from '/src/assets/cards/vector.webp';
 import Scenery from '/src/assets/section2/scenery.jpg';
-import Vector2 from '/src/assets/section2/Vector.png';
+import Flower from '/src/assets/section2/flower.png';
 import Tombsection from "/src/components/CommonSection/Tombsection";
 import VibezSection from "/src/components/VibezSection/VibezSection";
 
@@ -19,7 +19,7 @@ const Home = () => {
 
       <FullSlider />
       <Section1 />
-      <CardOne rev={false}
+      <CardOne rev={true}
         bgColor={"#104D391A"}
         bgColor2={"#104D39"}
         img1={CherryImg}
@@ -30,7 +30,7 @@ const Home = () => {
         color={"#FFFFFF"}
       />
 
-      <CardOne rev={true}
+      <CardOne rev={false}
         bgColor={"#DDD7CB4D"}
         bgColor2={"#DDD7CB"}
         img1={RoomImg}
@@ -41,7 +41,7 @@ const Home = () => {
         color={"#000000"}
       />
 
-      <CardOne rev={false}
+      <CardOne rev={true}
         bgColor={"#6D351833"}
         bgColor2={"#6D3518"}
         img1={ChessImg}
@@ -51,7 +51,7 @@ const Home = () => {
         description={"Your investment should work as hard as you do. Our strategic rental programs and expert property management ensure your villa or resort generates competitive returns, with transparency and ease."}
         color={"#FFFFFF"} />
         <VibezSection />
-      <Tombsection bgColor={"#104D39"} color={'white'} logo={Vector2} imgSrc={Scenery} btn={true}/>
+      <Tombsection bgColor={"#104D39"} color={'white'} logo={Flower} imgSrc={Scenery} btn={true}/>
 
     </>
   );

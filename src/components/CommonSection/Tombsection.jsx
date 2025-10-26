@@ -1,6 +1,7 @@
 import './tombsection.css'
-import BG from '/src/assets/section2/pattern.webp';
+import BG from '/src/assets/bgVector/lines.png';
 import React from 'react'
+import CommonCard from '../CommonCard/CommonCard';
 
 export default function Tombsection(props) {
     return (

@@ -9,10 +9,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: var(--bg);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: var(--bg) center center/cover no-repeat;
     z-index: 0;
 }
 

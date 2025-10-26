@@ -1,7 +1,7 @@
 import './section.css'
-import BG1 from '/src/assets/section1/Group-3.webp';
-import BG2 from '/src/assets/section1/Group-5.webp';
-import BG3 from '/src/assets/section1/arrowdown.png';
+import BG1 from '/src/assets/bgVector/leavesleft.png';
+import BG2 from '/src/assets/bgVector/leavesright.png';
+import BG3 from '/src/assets/bgVector/arrowdown.png';
 import React from 'react'
 
 export default function Section1() {

@@ -12,7 +12,7 @@ export default function CardOne(props) {
 
     return (
         <div ref={ref}>
-            <div className={`flex ${props.rev ? 'flex-row' : 'flex-row-reverse'} items-center justify-between h-[714px]`}>
+            <div className={`flex ${props.rev ? 'flex-row' : 'flex-row-reverse'} items-center justify-between h-[714px] cardContainer`}>
                 {/* Left Card */}
                 <motion.div
                     className="leftCard h-full min-w-[50%] flex flex-col items-center justify-center"
@@ -37,7 +37,7 @@ export default function CardOne(props) {
                 {/* Right Card */}
                 <motion.div 
                     className='rightCard h-[100%] min-w-[50%] flex flex-col justify-center text-white text-left'
-                    style={{backgroundColor: props.bgColor2}}
+                    style={{backgroundColor: props.bgColor2, color: props.color}}
                     variants={props.rev ? slideFromRight() : slideFromLeft()}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
@@ -51,14 +51,16 @@ export default function CardOne(props) {
                     />
                     <motion.p 
                         className='font-maharlika card__heading'
+                        style={{color: props.color}}
                         variants={fadeUp(0.65)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                    >
+                        >
                         {props.heading}
                     </motion.p>
                     <motion.p 
                         className='font-barlow card__desc'
+                        style={{color: props.color}}
                         variants={fadeUp(0.8)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
@@ -66,7 +68,7 @@ export default function CardOne(props) {
                         {props.description}
                     </motion.p>
                     <motion.button 
-                        className='button border border-white cursor-pointer hover:bg-black hover:text-white mt-8 px-16 py-4 text-xs font-barlow max-w-fit'
+                        className='button border border-[props.color] cursor-pointer hover:bg-black hover:text-white mt-8 px-16 py-4 text-xs font-barlow max-w-fit'
                         variants={fadeUp(0.95)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
