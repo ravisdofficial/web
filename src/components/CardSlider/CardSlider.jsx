@@ -9,7 +9,7 @@ import { SliderWrapper,
 Container,
 StyledSlider,
 ArrowsContainer,
-ArrowButton } from './CardSlider.styles'
+ArrowButton } from './CardSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 

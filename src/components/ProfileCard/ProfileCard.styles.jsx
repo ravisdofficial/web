@@ -2,14 +2,28 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   width: 75%;
-  overflow: hidden;
   border-top-left-radius: 35%;
-    border-top-right-radius: 35%;
+  border-top-right-radius: 35%;
+  position: relative;
+    ::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #96969600;
+top: -21px;
+    height: 389px;
+ border:20px solid #3a6c433b;
+    box-sizing: content-box;
+    left: -20px;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+        border-bottom: 0;
+    }
 `;
 
 export const Image = styled.img`
   width: 100%;
-  max-height: 415px;
+  height: 350px;
   object-fit: cover;
   border-top-left-radius: 90%;
     border-top-right-radius: 90%;

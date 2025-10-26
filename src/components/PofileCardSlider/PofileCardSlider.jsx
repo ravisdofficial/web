@@ -2,7 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import ProfileCard from "../ProfileCard/ProfileCard";
 import profileImage from '../../assets/profile/profile.png';
-import { SliderWrapper } from './PofileCardSlider.styles';
+import { SliderWrapper, ArrowButtonRight, ArrowButtonLeft } from './PofileCardSlider.styles';
+import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
+import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 
 const profileData = [
   {
@@ -50,12 +52,30 @@ const profileData = [
 ];
 
 function PofileCardSlider() {
+
+  
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <ArrowButtonLeft direction="left" onClick={onClick} ><img src={RoudLeftArrow}  alt="rightarror" /></ArrowButtonLeft>
+    );
+  }
+  function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <ArrowButtonRight direction="right" onClick={onClick} ><img src={RoudrightArrow}  alt="rightarror" /> </ArrowButtonRight>
+       
+      );
+    }
+    
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
   return (
     <SliderWrapper>
