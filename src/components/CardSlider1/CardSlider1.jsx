@@ -1,15 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
-
-import SliderCardItem from '../SliderCardItem/SliderCardItem';
 import SliderImage1 from '../../assets/sliderglobal/sliderCard1.webp'
 import SliderImage2 from '../../assets/sliderglobal/sliderCard2.webp'
 import SliderImage3 from '../../assets/sliderglobal/sliderCard3.webp'
 import { SliderWrapper,
 Container,
 StyledSlider,
-ArrowsContainer,
-ArrowButton } from './CardSlider.styles';
+Card,
+Image,
+Body,
+Title,
+Content, ArrowButtonRight, ArrowButtonLeft } from './CardSlider1.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 
@@ -17,40 +18,62 @@ import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 const cardData = [
   {
     id: 1,
-    title: 'Award name ipsum dolor sit amet',
+    title: 'Project 1',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     image: SliderImage1
   },
   {
     id: 2,
-    title: 'Award name ipsum dolor sit amet',
+    title: 'Project 2',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     image: SliderImage2
   },
   {
     id: 3,
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Prject 3',
+    content: 'Prject 2, consectetur adipiscing elit',
+    image: SliderImage3
+  },
+  {
+    id: 4,
+    title: 'Prject 4',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     image: SliderImage3
   }
 ];
 
-export default function Conatct() {
+export default function CardSlider1() {
   const sliderRef = React.useRef(null);
 
+    function NextArrow(props) {
+      const { className, style, onClick } = props;
+      return (
+        <ArrowButtonLeft direction="left" onClick={onClick} ><img src={RoudLeftArrow}  alt="rightarror" /></ArrowButtonLeft>
+      );
+    }
+    function PrevArrow(props) {
+      const { className, style, onClick } = props;
+      return (
+          <ArrowButtonRight direction="right" onClick={onClick} ><img src={RoudrightArrow}  alt="rightarror" /> </ArrowButtonRight>
+        );
+      }
   const settings = {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "20%",
-    slidesToShow: 1,
+    centerPadding: "5%",
+    slidesToShow: 2,
     speed: 500,
-    arrows: false,
+    dots:true,
+    arrows: true,
+    slidesToScroll: 2,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          centerPadding: "20%",
+          centerPadding: "10%",
         }
       },
       {
@@ -76,6 +99,17 @@ export default function Conatct() {
     sliderRef.current?.slickNext();
   };
 
+  const SliderCardItem = ({ image, title, subTitle = '', content }) => {
+    return (
+      <Card>
+        <Image src={image} alt={title} />
+        <Body>
+          <Title>{title}</Title>
+        </Body>
+      </Card>
+    );
+  };
+
   return (
     <SliderWrapper>
       <Container>
@@ -84,11 +118,7 @@ export default function Conatct() {
             <SliderCardItem key={card.id} image={card?.image} title={card.title} content={card.content} />
           ))}
         </StyledSlider>
-        
-        <ArrowsContainer>
-          <ArrowButton direction="left" onClick={goToPrev} ><img src={RoudLeftArrow}  alt="rightarror" /></ArrowButton>
-          <ArrowButton direction="right" onClick={goToNext} ><img src={RoudrightArrow}  alt="rightarror" /> </ArrowButton>
-        </ArrowsContainer>
+
       </Container>
     </SliderWrapper>
   );

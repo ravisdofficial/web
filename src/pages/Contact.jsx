@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import contactBackground from "../assets/home/contactBackground.webp";
 import maskShape from "../assets/home/Maskgroup.png";
 import vectorShape from "../assets/home/Vector_form.png";
+import contactDeviderImg from "../assets/bgVector/contactDevider.png";
 
 export default function ContactUs() {
   const {
@@ -48,28 +49,29 @@ export default function ContactUs() {
                 Contact details
               </h3>
             </div>
-
-            <div className="grid grid-cols-2 gap-x-12 text-sm md:text-base text-white">
+            <div className="flex justify-between items-start md:text-base text-sm text-white">
               <div className="space-y-6">
                 <div>
                   <p className="font-semibold mb-1">Email</p>
                   <p className="opacity-90">info@vibezclub.com</p>
                 </div>
-
                 <div>
                   <p className="font-semibold mb-1">Phone number</p>
                   <p className="opacity-90">+91 8152 88 33 88</p>
                 </div>
               </div>
 
-              <div>
+              <img className="w-[37px]" src={contactDeviderImg} alt="divider" />
+
+              <div className="max-w-[200px]">
                 <p className="font-semibold mb-1">Address</p>
                 <p className="opacity-90 leading-relaxed">
-                  #200, 4th floor, 10th cross, CBI Main Road,<br />
+                  #200, 4th floor, 10th cross, CBI Main Road,
                   Ganganagar, Bangalore – 560032.
                 </p>
               </div>
             </div>
+
           </div>
 
         </div>

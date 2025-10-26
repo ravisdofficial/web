@@ -33,6 +33,7 @@ export const StyledSlider = styled(Slider)`
   .slick-arrow {
     display: none !important;
   }
+
 `;
 
 export const ArrowsContainer = styled.div`
