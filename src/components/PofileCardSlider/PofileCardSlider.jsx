@@ -77,6 +77,7 @@ function PofileCardSlider() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />
   };
+  
   return (
     <SliderWrapper>
       <Slider {...settings}>

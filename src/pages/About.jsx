@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from "../components/FullSlider/Banner";
 import CardSlider from '../components/CardSlider/CardSlider';
+import CardSlider1 from '../components/CardSlider1/CardSlider1';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import PofileCardSlider from '../components/PofileCardSlider/PofileCardSlider';
 
@@ -14,6 +15,7 @@ export default function About() {
         button="Learn More"
         bgEffect={true}
         />
+      <CardSlider1 />
       <CardSlider />
       <PofileCardSlider />
         </>
