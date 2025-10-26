@@ -11,6 +11,7 @@ import VectorImg from '/src/assets/cards/vector.webp';
 import Scenery from '/src/assets/section2/scenery.jpg';
 import Vector2 from '/src/assets/section2/Vector.png';
 import Tombsection from "/src/components/CommonSection/Tombsection";
+import VibezSection from "/src/components/VibezSection/VibezSection";
 
 const Home = () => {
   return (
@@ -49,6 +50,7 @@ const Home = () => {
         btnLine={"Learn More"}
         description={"Your investment should work as hard as you do. Our strategic rental programs and expert property management ensure your villa or resort generates competitive returns, with transparency and ease."}
         color={"#FFFFFF"} />
+        <VibezSection />
       <Tombsection bgColor={"#104D39"} color={'white'} logo={Vector2} imgSrc={Scenery} btn={true}/>
 
     </>
