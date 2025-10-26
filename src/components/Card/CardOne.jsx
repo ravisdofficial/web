@@ -18,7 +18,7 @@ export default function CardOne(props) {
                     <img className='cardLogo' src={`${props.img2}`} alt="" />
                     <p className='font-maharlika card__heading' style={{color: props.color}}>{props.heading}</p>
                     <p className='font-barlow card__desc' style={{color: props.color}}>{props.description}</p>
-                    <button className='button border cursor-pointer hover:bg-black hover:text-white mt-8 px-16 py-4 text-xs font-barlow max-w-fit cardBtn' style={{color: props.color, borderColor: props.color}}>
+                    <button className='button border cursor-pointer mt-8 px-16 py-4 text-xs font-barlow max-w-fit cardBtn' style={{color: props.color, borderColor: props.color}}>
                         {props.btnLine}
                     </button>
                 </div>
