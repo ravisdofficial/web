@@ -1,5 +1,5 @@
- import styled from 'styled-components';
- export const BannerDiv = styled.div`
+import styled from 'styled-components';
+export const BannerDiv = styled.div`
   width: 100%;
   padding: 60px 0;
   display: flex;
@@ -8,7 +8,7 @@
   background: #fff;
 `;
 
- export const BannerContentWrapper = styled.div`
+export const BannerContentWrapper = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -20,25 +20,37 @@
 `;
 
 
- export const BannerTitle = styled.h1`
-  font-size: 2.5rem;
+export const BannerTitle = styled.h1`
   color: #333;
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-weight: 500;
+  font-family: Maharlika;
+ font-weight: 400;
+ font-style: Regular;
+ font-size: 48px;
+ leading-trim: NONE;
+ line-height: 100%;
+ letter-spacing: 0%;
+ vertical-align: middle;
+ text-transform: uppercase;
 `;
 
 
- export const BannerContent = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
+export const BannerContent = styled.p`
   color: #666;
   margin-bottom: 1.5rem;
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 28px;
+  letter-spacing: 0%;
 `;
 
 export const StyledImage = styled.img`
   height:583px;
   width: 100%;
-  border-top-left-radius: 10000000000px;
-  border-top-right-radius: 10000000000px;
+  border-top-left-radius: 51%;
+  border-top-right-radius: 51%;
+  object-fit: cover;
 `;
