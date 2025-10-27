@@ -1,11 +1,14 @@
 import React from 'react'
 import Banner from "../components/FullSlider/Banner";
 import CardSlider from '../components/CardSlider/CardSlider';
-import CardSlider1 from '../components/CardSlider1/CardSlider1';
-import ProfileCard from '../components/ProfileCard/ProfileCard';
+import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
 import PofileCardSlider from '../components/PofileCardSlider/PofileCardSlider';
 import MissionVisionSection from '../components/MissionVisionSection/MissionVisionSection';
 
+import { PathSection, SectionTitle, PathSectionCards, SectionSubTitle } from './styles/page.styles';
+import OvelCard from '../components/OvelCard/OvelCard';
+import { AboutovalCards } from '../content/about';
+import {ProfileSliderSection } from './styles/page.styles'
 export default function About() {
   return (
     <>
@@ -18,8 +21,26 @@ export default function About() {
       />
       <MissionVisionSection />
       <CardSlider1 />
+      <PathSection >
+        <SectionTitle>
+          Our path towards progress
+        </SectionTitle>
+        <SectionSubTitle>
+          Vibez Estates has achieved remarkable growth and recognition in the real estate sector
+
+        </SectionSubTitle>
+        <PathSectionCards>
+          {
+            AboutovalCards.map((item) => {
+              return <OvelCard key={item?.title} title={item?.title} content={item?.content} counts={item?.counts} bgImage={item?.bgImage} />
+            })
+          }
+        </PathSectionCards>
+      </PathSection>
       <CardSlider />
+      <ProfileSliderSection className="green-color-with-vector">
       <PofileCardSlider />
+      </ProfileSliderSection>
     </>
   );
 }
