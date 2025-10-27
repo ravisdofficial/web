@@ -15,7 +15,6 @@ const amenitiesSectInfo = {
   { icon: diningIcon, title: "Gourmet dining options" },
   { icon: poolIcon, title: "Exclusive access to golf courses and private beaches" },
 ],
-columns: 4
 }
 export default function VillaContent() {
   return (
