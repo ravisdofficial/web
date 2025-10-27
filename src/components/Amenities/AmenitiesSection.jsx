@@ -11,7 +11,7 @@ import {
 } from "./AmenitiesSection.style";
 import amenitiesPattern from "../../assets/amenities/amenitiesPattern.png";
 
-const AmenitiesSection = ({ heading, subHeading, amenitiesData }) => {
+const AmenitiesSection = ({ heading, subHeading, amenitiesData}) => {
 
   const columns = amenitiesData.length <= 5 ? amenitiesData.length : 4;
 

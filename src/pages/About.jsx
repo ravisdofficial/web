@@ -4,6 +4,7 @@ import CardSlider from '../components/CardSlider/CardSlider';
 import CardSlider1 from '../components/CardSlider1/CardSlider1';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import PofileCardSlider from '../components/PofileCardSlider/PofileCardSlider';
+import MissionVisionSection from '../components/MissionVisionSection/MissionVisionSection';
 
 export default function About() {
   return (
@@ -14,10 +15,11 @@ export default function About() {
         content="Dive into the world of Vibez Estates, where every property tells a story of luxury, sustainability, and innovation."
         button="Learn More"
         bgEffect={true}
-        />
+      />
+      <MissionVisionSection />
       <CardSlider1 />
       <CardSlider />
       <PofileCardSlider />
-        </>
+    </>
   );
 }

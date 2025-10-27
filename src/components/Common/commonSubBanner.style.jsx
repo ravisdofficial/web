@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const BannerDiv = styled.div`
   width: 100%;
   padding: 60px 0;
@@ -6,6 +7,18 @@ export const BannerDiv = styled.div`
   justify-content: center;
   align-items: center;
   background: #fff;
+
+  @media (max-width: 1024px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 0;
+  }
 `;
 
 export const BannerContentWrapper = styled.div`
@@ -17,23 +30,55 @@ export const BannerContentWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
+
+  /* Tablet & Mobile View */
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
 `;
 
+export const StyledImage = styled.img`
+  height: 583px;
+  width: 100%;
+   border-top-left-radius: 51%;
+   border-top-right-radius: 51%;
+  object-fit: cover;
+
+  @media (max-width: 1024px) {
+    height: 450px;
+
+  }
+
+  @media (max-width: 768px) {
+    height: 340px;
+   
+  }
+
+  @media (max-width: 480px) {
+    height: 260px;
+   
+  }
+`;
 
 export const BannerTitle = styled.h1`
   color: #333;
   margin-bottom: 1rem;
   font-family: Maharlika;
- font-weight: 400;
- font-style: Regular;
- font-size: 48px;
- leading-trim: NONE;
- line-height: 100%;
- letter-spacing: 0%;
- vertical-align: middle;
- text-transform: uppercase;
-`;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 48px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
 
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+`;
 
 export const BannerContent = styled.p`
   color: #666;
@@ -45,12 +90,8 @@ export const BannerContent = styled.p`
   leading-trim: NONE;
   line-height: 28px;
   letter-spacing: 0%;
-`;
 
-export const StyledImage = styled.img`
-  height:583px;
-  width: 100%;
-  border-top-left-radius: 51%;
-  border-top-right-radius: 51%;
-  object-fit: cover;
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
