@@ -51,3 +51,18 @@ vertical-align: middle;
 text-transform: uppercase;
 
   }
+
+  .vector-leaf-left {
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background : url('/src/assets/bgVector/leavesright.png') left bottom no-repeat,
+          url("/src/assets/bgVector/leavesleft.png") right top no-repeat;
+
+  }
+
+  @media (width <= 1200px) {
+    .vector-leaf-left {
+      background-size: 35%;
+  }
+  }
