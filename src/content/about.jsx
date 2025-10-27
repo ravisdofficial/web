@@ -1,7 +1,7 @@
 import React from 'react'
-import Villa1 from '../assets/villa/villa1.png';
- import Villa2 from '../assets/villa/villa2.png';
- import Villa3 from '../assets/villa/villa3.png';
+import Villa1 from '../assets/villa/villa1.PNG';
+ import Villa2 from '../assets/villa/villa2.PNG';
+ import Villa3 from '../assets/villa/villa3.PNG';
 
  export const AboutovalCards = [
     {
