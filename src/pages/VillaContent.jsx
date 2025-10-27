@@ -7,7 +7,7 @@ import diningIcon from "../assets/amenities/diningIcon.png";
 import golfIcon from "../assets/amenities/spa.png";
 import { SericeSliderWrapper, TestimonialSliderWraper, ZigZagSliderWraper } from './styles/page.styles'
 import SericeSliderSection from '../components/ServicesSlider/ServiceSliderSection';
-import { servicesSliderData, villaTestinmonials} from '../content/villa';
+import { servicesSliderData, villaTestinmonials, ProjectSliderData} from '../content/villa';
 import TestimonialSlider from '../components/TestimonialSlider/TestimonialSlider';
 import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
 
@@ -44,7 +44,7 @@ export default function VillaContent() {
       <TestimonialSlider cardData={villaTestinmonials} />
       </TestimonialSliderWraper>
       <ZigZagSliderWraper>
-          <ZigZagSlider />
+          <ZigZagSlider cardData={ProjectSliderData} />
       </ZigZagSliderWraper>
     </>
   );

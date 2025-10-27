@@ -14,34 +14,8 @@ Content, ArrowButtonRight, ArrowButtonLeft } from './ZigZagSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 
-const cardData = [
-  {
-    id: 1,
-    title: 'Project 1',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage1
-  },
-  {
-    id: 2,
-    title: 'Project 2',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage2
-  },
-  {
-    id: 3,
-    title: 'Prject 3',
-    content: 'Prject 2, consectetur adipiscing elit',
-    image: SliderImage3
-  },
-  {
-    id: 4,
-    title: 'Prject 4',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage3
-  }
-];
 
-export default function ZigZagSlider() {
+export default function ZigZagSlider({cardData}) {
   const sliderRef = React.useRef(null);
 
     function NextArrow(props) {
