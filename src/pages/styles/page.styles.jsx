@@ -53,5 +53,14 @@ letter-spacing: 0%;
 text-align: center;
 color: #6D3518;
     margin: 50px 0 70px 0;
+    
 `
-
+export const SericeSliderWrapper = styled.div`
+`
+export const TestimonialSliderWraper = styled.div`
+padding:40px;
+background: #F2EFEC;
+`
+export const ZigZagSliderWraper = styled.div`
+background: #F2EFEC;
+`

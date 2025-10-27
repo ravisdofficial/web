@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const BannerDiv = styled.div`
   width: 100%;
-  padding: 60px 0;
+  padding: 60px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,23 +37,28 @@ export const BannerContentWrapper = styled.div`
     gap: 32px;
     text-align: center;
   }
+
+  .image-div {
+   @media (max-width: 900px) {
+           margin: auto;
+  }
+  }
 `;
 
 export const StyledImage = styled.img`
   height: 583px;
   width: 100%;
-   border-top-left-radius: 51%;
-   border-top-right-radius: 51%;
+   border-top-left-radius: 10000px;
+   border-top-right-radius: 10000px;
   object-fit: cover;
-
+  max-width:431px;
   @media (max-width: 1024px) {
     height: 450px;
-
   }
 
   @media (max-width: 768px) {
     height: 340px;
-   
+
   }
 
   @media (max-width: 480px) {
@@ -62,7 +67,7 @@ export const StyledImage = styled.img`
   }
 `;
 
-export const BannerTitle = styled.h1`
+export const BannerTitle = styled.h2`
   color: #333;
   margin-bottom: 1rem;
   font-family: Maharlika;
@@ -74,7 +79,8 @@ export const BannerTitle = styled.h1`
   letter-spacing: 0%;
   vertical-align: middle;
   text-transform: uppercase;
-
+  max-width: 757px;
+  margin:auto;
   @media (max-width: 900px) {
     text-align: center;
   }

@@ -18,7 +18,7 @@ export const ContentWrapper = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 20px;
 `;
 
 export const Heading = styled.h2`
@@ -33,6 +33,8 @@ export const Heading = styled.h2`
   text-transform: uppercase;
   color: #e5d9c7;
   text-transform: uppercase;
+      max-width: 787px;
+    margin: auto;
 `;
 
 export const SubHeading = styled.p`
@@ -51,7 +53,7 @@ export const SubHeading = styled.p`
 export const AmenitiesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(${(props) => props.columns}, minmax(200px, 1fr));
-  gap: 2.5rem;
+  gap: 20px;
   justify-content: center;
   justify-items: center;
   align-items: start;

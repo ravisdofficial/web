@@ -40,3 +40,14 @@
     background: url('/src/assets/bgVector/lines.png');
     background-color: rgb(16, 77, 57);
   }
+
+  .sectio-title1 {
+    font-family: "Maharlika";
+font-weight: 400;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+text-transform: uppercase;
+
+  }

@@ -4,15 +4,6 @@
     text-align: center;
 }
 
-
-.tomb-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--bg) center center/cover no-repeat;
-    z-index: 0;
-}
-
 .uppertomb{
     padding: 4rem 0;
 }
@@ -21,6 +12,7 @@
     width: 3rem;
     height: 3rem;
     margin: 0 auto 10px;
+    
 }
 
 .tomb__heading{

@@ -14,7 +14,6 @@ Content, ArrowButtonRight, ArrowButtonLeft } from './ZigZagSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 
-
 const cardData = [
   {
     id: 1,

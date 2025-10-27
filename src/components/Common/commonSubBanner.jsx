@@ -7,7 +7,7 @@ function CommonSubBanner({ image, title, content, boldContent = "", amenitiesSec
     <>
       <BannerDiv>
         <BannerContentWrapper>
-          <div>
+          <div className="image-div">
             <StyledImage src={image} alt="project" />
           </div>
           <div>
