@@ -10,14 +10,14 @@ import {
   FloorImage
 } from "./Floorplan.style";
 
-import foorPlan1 from "../../assets/home/floorplan1.png";
-;
+import floorPlan1 from "../../assets/home/floorplan1.png";
+
 
 const plans = [
-  { id: 1, label: "1 BHK, 6500 sqft", image: foorPlan1 },
-  { id: 2, label: "2 BHK, 6500 sqft", image: foorPlan1 },
-  { id: 3, label: "1 BHK, 10000 sqft", image: foorPlan1 },
-  { id: 4, label: "2 BHK, 10000 sqft", image: foorPlan1 },
+  { id: 1, label: "1 BHK, 6500 sqft", image: floorPlan1 },
+  { id: 2, label: "2 BHK, 6500 sqft", image: floorPlan1 },
+  { id: 3, label: "1 BHK, 10000 sqft", image: floorPlan1 },
+  { id: 4, label: "2 BHK, 10000 sqft", image: floorPlan1 },
 ];
 
 const FloorPlans = () => {
