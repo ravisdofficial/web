@@ -50,4 +50,5 @@ export const SocialIcon = styled.img`
   aspect-ratio: 1;
   margin-left: 10px;
   max-width: 30px;
+  filter: invert(24%) sepia(14%) saturate(1772%) hue-rotate(100deg) brightness(85%) contrast(97%);
   `

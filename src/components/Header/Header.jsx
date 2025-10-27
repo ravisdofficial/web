@@ -17,9 +17,23 @@ const Header = () => {
     top: 14px;
   `;
 
+  const HeaderContainer = styled.div`
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: row !important;
+    }
+  `;
+
   return (
     <header className="bg-white shadow-md fixed w-full z-50">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <HeaderContainer className="container mx-auto px-4 py-3">
         {/* Left: Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
           <Logo src={LogoImg} alt="Logo" />
@@ -53,7 +67,7 @@ const Header = () => {
             Contact Us
           </Link>
         </div>
-      </div>
+      </HeaderContainer>
 
       {/* Mobile Menu */}
       {isOpen && (
@@ -63,13 +77,6 @@ const Header = () => {
             <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
             <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
             <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
-            <Link
-              to="/contact"
-              onClick={toggleMenu}
-              className="bg-blue-600 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Contact Us
-            </Link>
           </nav>
         </div>
       )}

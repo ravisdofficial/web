@@ -11,7 +11,7 @@ import {
   FooterItem,
   SocialIcon
 } from './footer.style';
-import MainLogo from "/src/assets/header/logo.png";
+import MainLogo from "/src/assets/footer/logo2.png";
 import Youtube from '/src/assets/footer/youtube.png'
 import Instagram from '/src/assets/footer/instagram.png'
 import Twitter from '/src/assets/footer/twitter.png'

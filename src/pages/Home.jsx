@@ -12,6 +12,7 @@ import Scenery from '/src/assets/section2/scenery.jpg';
 import Flower from '/src/assets/section2/flower.png';
 import Tombsection from "/src/components/CommonSection/Tombsection";
 import VibezSection from "/src/components/VibezSection/VibezSection";
+import BG from '/src/assets/bgVector/lines.png';
 
 const Home = () => {
   return (
@@ -51,7 +52,10 @@ const Home = () => {
         description={"Your investment should work as hard as you do. Our strategic rental programs and expert property management ensure your villa or resort generates competitive returns, with transparency and ease."}
         color={"#FFFFFF"} />
         <VibezSection />
-      <Tombsection bgColor={"#104D39"} color={'white'} logo={Flower} imgSrc={Scenery} btn={true}/>
+      <Tombsection bgColor={"#104D39"} color={'white'} logo={Flower} imgSrc={Scenery} btn={true} BG={BG}
+      heading={"Discover our latest ventures."} content={"Explore upcoming real estate developments and investment opportunities."} btnText={"Discover Farmlands"}
+      fontStyle={"font-poppins"}
+      />
 
     </>
   );
