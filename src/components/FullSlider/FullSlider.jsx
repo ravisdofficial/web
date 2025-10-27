@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import Banner from "./Banner";
 import { SliderNextButton, SliderPrevButton } from './Banner.style'
+import BannerArrows from "../../assets/sliderglobal/right-arrow.png";
+import BannerImg from "../../assets/home/banner1.webp";
 import './banner.css'
 export default function FullSlider() {
 
@@ -9,7 +11,7 @@ export default function FullSlider() {
     const { className, style, onClick } = props;
     return (
       <SliderNextButton onClick={onClick}>
-        <img src="src/assets/sliderglobal/right-arrow.png" alt="right arrow"/>
+        <img src={BannerArrows} alt="right arrow"/>
       </SliderNextButton>
     );
   }
@@ -17,7 +19,7 @@ export default function FullSlider() {
     const { className, style, onClick } = props;
     return (
       <SliderPrevButton onClick={onClick}>
-        <img src="src/assets/sliderglobal/right-arrow.png" alt="right arrow"/>
+        <img src={BannerArrows} alt="right arrow"/>
       </SliderPrevButton>
     );
   }
@@ -39,7 +41,7 @@ export default function FullSlider() {
 
       <div index="1">
         <Banner
-          image="src/assets/home/banner1.webp"
+          image={BannerImg}
           title="Join the Vibez tribe"
           content="Your dream lifestyle starts here, with the coolest crew in town. Explore exclusive properties and investment opportunities."
           button="Learn more"
@@ -47,7 +49,7 @@ export default function FullSlider() {
       </div>
       <div index="2">
         <Banner
-          image="src/assets/home/banner1.webp"
+          image={BannerImg}
           title="Join the Vibez tribe"
           content="Your dream lifestyle starts here, with the coolest crew in town. Explore exclusive properties and investment opportunities."
           button="Learn more 1"
