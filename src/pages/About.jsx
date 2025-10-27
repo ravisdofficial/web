@@ -22,7 +22,7 @@ export default function About() {
         button="Learn More"
         bgEffect={true}
       />
-      <Tombsection bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Scenery} btn={false}
+      <Tombsection bgColor={"#DDD7CB4D"} bgTheme="vector-leaf-left-right-v1" color={'black'} logo={Flower} imgSrc={Scenery} btn={false}
         heading={"Foundation & evolution"} content={"Over the years, we've expanded our horizons to include a diverse range of properties from  farmlands to luxury villas and eco-resorts, while staying true to our roots in sustainable agriculture."} subHeading={"Vibez Estates began in 2009 as a visionary project in Bangalore."} subHeadColor={"#6D3518"}
         fontStyle={"font-barlow"}
       />

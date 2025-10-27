@@ -185,4 +185,11 @@ export const SliderWrapperDiv = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 40px;
+      background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background: url('/src/assets/bgVector/leaferightfaded.png');
+  background-size: 66%;
+    background-repeat: no-repeat;
+    background-position: top right;
 `

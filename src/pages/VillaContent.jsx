@@ -10,7 +10,7 @@ import SericeSliderSection from '../components/ServicesSlider/ServiceSliderSecti
 import { servicesSliderData, villaTestinmonials, ProjectSliderData} from '../content/villa';
 import TestimonialSlider from '../components/TestimonialSlider/TestimonialSlider';
 import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
-
+import zigZagBgimage from '../assets/home/banner2.webp'
 const amenitiesSectInfo = {
   heading: "Amenities designed for the discerning",
   subHeading: "Our luxury villas and resorts feature world-class extravaganza designed for every whim to be anticipated and fulfilled",
@@ -44,7 +44,8 @@ export default function VillaContent() {
       <TestimonialSlider cardData={villaTestinmonials} />
       </TestimonialSliderWraper>
       <ZigZagSliderWraper>
-          <ZigZagSlider cardData={ProjectSliderData} />
+          <ZigZagSlider cardData={ProjectSliderData}  title="Discover our
+luxurious offerings" bgImage={zigZagBgimage}/>
       </ZigZagSliderWraper>
     </>
   );

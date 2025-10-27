@@ -1,68 +1,91 @@
-
 @import "tailwindcss";
-  
+
 @font-face {
-    font-family: 'Maharlika';
-    src: url('/fonts/Maharlika-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Inter";
-    src: url('/fonts/Inter-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Poppins";
-    src: url('/fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Barlow";
-    src: url('/fonts/Barlow-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @theme {
-    --font-maharlika: "Maharlika", sans-serif; 
-    --font-inter: "Inter", sans-serif;
-    --font-poppins: "Poppins", sans-serif;
-    --font-barlow: "Barlow", sans-serif;
-  }
+  font-family: 'Maharlika';
+  src: url('/fonts/Maharlika-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  .green-color-with-vector {
-    background: url('/src/assets/bgVector/lines.png');
-    background-color: rgb(16, 77, 57);
-  }
+@font-face {
+  font-family: "Inter";
+  src: url('/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  .sectio-title1 {
-    font-family: "Maharlika";
-font-weight: 400;
-font-size: 48px;
-line-height: 100%;
-letter-spacing: 0%;
-vertical-align: middle;
-text-transform: uppercase;
+@font-face {
+  font-family: "Poppins";
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  }
+@font-face {
+  font-family: "Barlow";
+  src: url('/fonts/Barlow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+@theme {
+  --font-maharlika: "Maharlika", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+}
+
+.green-color-with-vector {
+  background: url('/src/assets/bgVector/lines.png');
+  background-color: rgb(16, 77, 57);
+}
+
+.sectio-title1 {
+  font-family: "Maharlika";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+}
+
+.vector-leaf-left-right {
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background: url('/src/assets/bgVector/leavesleft1.png') left bottom no-repeat,
+    url("/src/assets/bgVector/leavesleft.png") right top no-repeat;
+  background-size: 22%;
+}
+.vector-leaf-left-right-v1 {
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background: url('/src/assets/bgVector/leavesright.png') left bottom no-repeat,
+    url("/src/assets/bgVector/leavesleft.png") right top no-repeat;
+  background-size: 22%;
+}
+
+@media (width <=1200px) {
   .vector-leaf-left {
-    background-size: contain;
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background : url('/src/assets/bgVector/leavesright.png') left bottom no-repeat,
-          url("/src/assets/bgVector/leavesleft.png") right top no-repeat;
+    background-size: 35%;
+  }
+}
+.vector-leaf-right {
+  background-size: contain;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background: url('/src/assets/bgVector/leaferightfaded.png') right top no-repeat;
+}
 
+@media (width <=1200px) {
+  .vector-leaf-left {
+    background-size: 35%;
   }
-
-  @media (width <= 1200px) {
-    .vector-leaf-left {
-      background-size: 35%;
-  }
-  }
+}

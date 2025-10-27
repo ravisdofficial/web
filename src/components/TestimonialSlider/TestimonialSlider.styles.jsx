@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import testinBorderImg from '../../assets/bgVector/testi-border.png';
-
+import QuoteImg from '../../assets/bgVector/quote.png'
 export const SliderWrapper = styled.div`
   width: 100%;
 background: #F2EFEC;
@@ -18,7 +18,6 @@ export const Container = styled.div`
 .sectio-title1 {
   max-width: 27vw;
     margin-left: 15vw;
-    margin-bottom: 50px;
  @media (max-width: 1350px) {
     margin-left: 13vw;
     }
@@ -34,13 +33,23 @@ export const Container = styled.div`
 export const StyledSlider = styled(Slider)`
 .testimonial-card {
    max-width: 417px;
-
+   padding-top: 77px;
+  position:relative;
     @media (max-width: 1250px) {
     max-width: 300px;
   }
     @media (max-width: 786px) {
     max-width: 150px;
   }
+    &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 100px;
+    width: 100px;
+     background: url(${QuoteImg}) no-repeat center / contain;
+}
     p {
     font-family: Poppins;
 font-weight: 400;
@@ -103,7 +112,7 @@ line-height: 1.5;
 
 export const ArrowsContainer = styled.div`
   position: absolute;
-  top: 42%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;

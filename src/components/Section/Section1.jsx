@@ -14,7 +14,7 @@ export default function Section1() {
     const [ref, isInView] = useScrollAnimation();
     return (
         <>
-            <div ref={ref} className='section-container pt-[60px] vector-leaf-left vector-leaf-right' >
+            <div ref={ref} className='section-container pt-[60px] vector-leaf-left-right' >
                 <p className='font-maharlika section__heading'>Our vision. Your dream.
                     <br />A perfect blend.</p>
                 <p className='font-barlow section__content' >

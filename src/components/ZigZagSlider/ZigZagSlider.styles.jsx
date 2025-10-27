@@ -7,12 +7,17 @@ export const SliderWrapper = styled.div`
   overflow: hidden;
   position: relative;
     width: 100%;
-    padding: 400px 0 80px 0;
+    padding: 200px 0 80px 0;
     overflow: hidden;
     position: relative;
     background: red;
-   background-image: url(src/assets/overlays/top-overlay.png), linear-gradient(to top, rgb(0 0 0 / 0%) 0%, transparent 70%), linear-gradient(to right, rgb(0 0 0 / 0%) 0%, transparent 50%, rgb(0 0 0 / 0%) 100%), linear-gradient(to bottom, rgb(255 255 255 / 35%) 0%, transparent 50%, rgb(16 77 57) 61%), url(src/assets/home/banner2.webp);
+   background-image: url(src/assets/overlays/top-overlay.png), linear-gradient(to top, rgb(0 0 0 / 0%) 0%, transparent 70%), linear-gradient(to right, rgb(0 0 0 / 0%) 0%, transparent 50%, rgb(0 0 0 / 0%) 100%), linear-gradient(to bottom, rgb(255 255 255 / 35%) 0%, transparent 17%, rgb(16 77 57) 61%), url(src/assets/home/banner2.webp);
     background-size: contain;
+    background-image: 
+    linear-gradient(to top, rgb(0 0 0 / 0%) 0%, transparent 70%), 
+    linear-gradient(to right, rgb(0 0 0 / 0%) 0%, transparent 50%, rgb(0 0 0 / 0%) 100%), 
+    linear-gradient(to bottom, rgb(255 255 255 / 35%) 0%, transparent 17%, rgb(16 77 57) 61%), 
+    url(${props => props.$bgImage});
 `;
 
 export const Container = styled.div`

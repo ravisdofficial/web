@@ -1,8 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import SliderImage1 from '../../assets/sliderglobal/sliderCard1.webp'
-import SliderImage2 from '../../assets/sliderglobal/sliderCard2.webp'
-import SliderImage3 from '../../assets/sliderglobal/sliderCard3.webp'
+import titleFlower from '../../assets/bgVector/flower.png'
 import { SliderWrapper,
 Container,
 StyledSlider,
@@ -13,9 +11,10 @@ Title,
 Content, ArrowButtonRight, ArrowButtonLeft } from './ZigZagSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
+import TitleWithImage from '../TitleWithImage/TitleWithImage';
 
 
-export default function ZigZagSlider({cardData}) {
+export default function ZigZagSlider({cardData, bgImage, title}) {
   const sliderRef = React.useRef(null);
 
     function NextArrow(props) {
@@ -84,7 +83,8 @@ export default function ZigZagSlider({cardData}) {
   };
 
   return (
-    <SliderWrapper>
+    <SliderWrapper $bgImage={bgImage}>
+      <TitleWithImage title={title} image={titleFlower}/>
       <Container>
         <StyledSlider ref={sliderRef} {...settings}>
           {cardData.map((card) => (
