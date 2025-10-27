@@ -123,12 +123,6 @@ export default function ContactUs() {
                 message: "Please enter a valid 10-digit phone number"
               }
             },
-            {
-              name: "project",
-              label: "Project name",
-              type: "text",
-              required: true
-            },
           ].map((field) => (
             <div key={field.name}>
               <input
@@ -147,6 +141,24 @@ export default function ContactUs() {
               )}
             </div>
           ))}
+
+          <div>
+            <select
+              className={`w-full border-b ${errors.project ? 'border-red-500' : 'border-gray-400'} focus:border-[#6b4b3e] outline-none py-3 bg-transparent text-gray-700`}
+              {...register("project", { required: "Project is required" })}
+              defaultValue=""
+            >
+              <option value="" disabled>Project name*</option>
+              <option value="Luxury Villa">Luxury Villa</option>
+              <option value="Managed Farm Lands">Managed Farm Lands</option>
+              <option value="Revenue Generation">Revenue Generation</option>
+            </select>
+            {errors.project && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.project.message}
+              </p>
+            )}
+          </div>
 
           <div>
             <textarea
