@@ -13,7 +13,8 @@ import plantationTrailIcon from "../assets/amenities/plantationTrailIcon.png";
 import gazeboIcon from "../assets/amenities/gazeboIcon.png";
 import starGazingIcon from "../assets/amenities/starGazingIcon.png";
 import badmintonIcon from "../assets/amenities/badmintonIcon.png";
-
+import FloorPlans from "../components/FloorPlan/Floorplan";
+import InvestSection from "../components/FloorPlan/InvestSection";
 
 const amenitiesSectInfo = {
   heading: "Amenities",
@@ -32,7 +33,6 @@ const amenitiesSectInfo = {
     { icon: starGazingIcon, title: "Star Grazing" },
     { icon: badmintonIcon, title: "Badminton" },
   ],
-  columns: 4,
 };
 
 export default function ProjectDetails() {
@@ -49,7 +49,9 @@ export default function ProjectDetails() {
         heading={amenitiesSectInfo.heading}
         subHeading={amenitiesSectInfo.subHeading}
         amenitiesData={amenitiesSectInfo.amenitiesData}
-      />;
+      />
+      <FloorPlans />
+      <InvestSection />
     </>
   );
 }
