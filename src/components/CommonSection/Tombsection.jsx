@@ -1,5 +1,4 @@
 import './tombsection.css'
-import BG from '/src/assets/bgVector/lines.png';
 import React from 'react'
 import CommonCard from '../CommonCard/CommonCard';
 import { motion } from 'framer-motion';
@@ -13,7 +12,7 @@ export default function Tombsection(props) {
     return (
         <>
             <div className='tomb-container' style={{
-                '--bg': `url(${BG})`,
+                '--bg': `url(${props.BG})`,
                 'backgroundColor': props.bgColor,
                 'color': props.color
             }}
@@ -24,21 +23,27 @@ export default function Tombsection(props) {
                         variants={slideFromLeft()}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className='font-maharlika tomb__heading' >Discover our
-                        <br />latest ventures.</motion.p>
-                    <motion.p className='font-poppins tomb__content'
+                        className='font-maharlika tomb__heading' >{props.heading}</motion.p>
+
+                    {props.subHeading && <motion.p className="props.fontStyle tomb__subheading mb-20"
+                    style={{color: props.subHeadColor}}
+                        variants={slideFromRight()}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                    >{props.subHeading}</motion.p>}
+
+                    <motion.p className='props.fontStyle tomb__content mt-10'
                         variants={slideFromRight()}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                     >
-                        Explore upcoming real estate developments
-                        <br />and investment opportunities
+                        {props.content}
                     </motion.p>
                     {props.btn && <motion.button
                         variants={fadeScale(0.3)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs formax-w-fit cardBtn'>Discover Farmlands</motion.button>}
+                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs formax-w-fit cardBtn'>{props.btnText}</motion.button>}
                 </div>
                 <div className='tombRectangle'>
                     <motion.img

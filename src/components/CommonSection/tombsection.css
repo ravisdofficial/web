@@ -30,11 +30,22 @@
     line-height: normal;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 20px !important;
     margin-bottom: 10px !important;
 }
 
+.tomb__subheading{
+    font-size: 1rem;
+    font-weight: bold !important;
+    width: 40vw;
+    margin:  00 auto;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    color: var(--subHeadColor);
+}
+
 .tomb__content{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: lighter !important;
     width: 40vw;
     margin: 0 auto;
@@ -48,17 +59,19 @@
      margin: 0 auto;
      width: 60vw;
      height: 55%;
-     border-top-left-radius: 1000000px;
-     border-top-right-radius: 1000000px;
+     border-top-left-radius: 51%;
+     border-top-right-radius: 51%;
+     overflow: hidden;
  }
 
  .tombRectangle>img {
-     object-position: right center;
+     object-position: center;
+     display: block;
      height: 100%;
      width: 100%;
      object-fit: cover;
-     border-top-left-radius: 10000px;
-     border-top-right-radius: 10000px;
+     border-top-left-radius: 51%;
+     border-top-right-radius: 51%;
  }
 
  @media (width <=767px) {
