@@ -10,7 +10,7 @@ Card,
 Image,
 Body,
 Title,
-Content, ArrowButtonRight, ArrowButtonLeft } from './CardSlider1.styles';
+Content, ArrowButtonRight, ArrowButtonLeft } from './ZigZagSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 
@@ -42,7 +42,7 @@ const cardData = [
   }
 ];
 
-export default function CardSlider1() {
+export default function ZigZagSlider() {
   const sliderRef = React.useRef(null);
 
     function NextArrow(props) {
