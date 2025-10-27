@@ -2,7 +2,7 @@ import React from "react";
 import FullSlider from "../components/FullSlider/FullSlider";
 import CardOne from '../components/Card/CardOne';
 import Section1 from '../components/Section/Section1';
-import CherryImg from '/src/assets/cards/cherry.webp';
+import CherryImg from '../assets/cards/cherry.webp';
 import Vector1Img from '/src/assets/cards/vector1.webp';
 import RoomImg from '/src/assets/cards/room.webp';
 import LuxuryImg from '/src/assets/cards/luxury.webp';
@@ -10,7 +10,7 @@ import ChessImg from '/src/assets/cards/chess.webp';
 import VectorImg from '/src/assets/cards/vector.webp';
 import Scenery from '/src/assets/section2/scenery.jpg';
 import Flower from '/src/assets/section2/flower.png';
-import Tombsection from "/src/components/CommonSection/Tombsection";
+import Tombsection from "../components/CommonSection/Tombsection";
 import VibezSection from "/src/components/VibezSection/VibezSection";
 import BG from '/src/assets/bgVector/lines.png';
 

@@ -10,9 +10,7 @@ export default function Tombsection(props) {
     const [ref, isInView] = useScrollAnimation();
     return (
         <>
-            <div className='tomb-container' style={{
-                '--bg': `url(${props.BG})`,
-                'backgroundColor': props.bgColor,
+            <div className='tomb-container green-color-with-vector' style={{
                 'color': props.color
             }}
                 ref={ref}>
@@ -44,7 +42,7 @@ export default function Tombsection(props) {
                         animate={isInView ? "visible" : "hidden"}
                         className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs formax-w-fit cardBtn'>{props.btnText}</motion.button>}
                 </div>
-                <div className='tombRectangle'>
+                <div className='tombRectangle '>
                     <motion.img
                         variants={fadeScale(0.3)}
                         initial="hidden"
