@@ -77,13 +77,6 @@ const Header = () => {
             <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
             <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
             <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
-            <Link
-              to="/contact"
-              onClick={toggleMenu}
-              className="bg-blue-600 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Contact Us
-            </Link>
           </nav>
         </div>
       )}
