@@ -10,11 +10,7 @@ import Img6 from '/src/assets/home/innovation.png';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import { motion } from 'framer-motion';
 import {
-    slideFromLeft,
-    slideFromRight,
-    slideFromDown,
-    fadeScale,
-    fadeUp,
+    slideFromLeft
 } from '../../helpers/animationhelper';
 
 export default function VibezSection() {
