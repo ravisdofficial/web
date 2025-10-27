@@ -24,7 +24,7 @@
 }
 
 .tomb__heading{
-    font-size: 48px;
+    font-size: 2.5rem;
     width: 40vw;
     margin: 0 auto;
     line-height: normal;
@@ -34,7 +34,7 @@
 }
 
 .tomb__content{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: lighter !important;
     width: 40vw;
     margin: 0 auto;
@@ -63,7 +63,7 @@
 
  @media (width <=767px) {
     .tomb-container {
-        height: 85vh;
+        height: 100vh;
     }
 
     .tomb__heading{
@@ -78,6 +78,6 @@
 
     .tombRectangle {
         width: 100vw;
-        height: 40%;
+        height: 55%;
     }
  }

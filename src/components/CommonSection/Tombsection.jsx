@@ -38,7 +38,7 @@ export default function Tombsection(props) {
                         variants={fadeScale(0.3)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className='font-maharlika button border cursor-pointer mt-8 px-16 py-4 text-xs formax-w-fit cardBtn'>Discover Farmlands</motion.button>}
+                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs formax-w-fit cardBtn'>Discover Farmlands</motion.button>}
                 </div>
                 <div className='tombRectangle'>
                     <motion.img

@@ -17,9 +17,23 @@ const Header = () => {
     top: 14px;
   `;
 
+  const HeaderContainer = styled.div`
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: row !important;
+    }
+  `;
+
   return (
     <header className="bg-white shadow-md fixed w-full z-50">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <HeaderContainer className="container mx-auto px-4 py-3">
         {/* Left: Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
           <Logo src={LogoImg} alt="Logo" />
@@ -53,7 +67,7 @@ const Header = () => {
             Contact Us
           </Link>
         </div>
-      </div>
+      </HeaderContainer>
 
       {/* Mobile Menu */}
       {isOpen && (
