@@ -10,7 +10,7 @@ import {
   FloorImage
 } from "./Floorplan.style";
 
-import floorPlan1 from "../../assets/home/floorplan1.png";
+import floorPlan1 from "../../assets/home/floorPlan1.png";
 
 
 const plans = [
