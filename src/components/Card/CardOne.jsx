@@ -21,20 +21,16 @@ export default function CardOne(props) {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
-                </motion.div>
-
-                {/* Rectangle (Center Image) */}
                 <motion.div 
                     className="rectangle"
-                    style={props.rev ? { left: '157px' } : { right: '157px' }}
+                    style={props.rev ? { left: '0' } : { right: '0' }}
                     variants={fadeScale(0.3)}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                 >
                     <img src={`${props.img1}`} alt="" />
                 </motion.div>
-
-                {/* Right Card */}
+                </motion.div>
                 <motion.div 
                     className='rightCard h-[100%] min-w-[50%] flex flex-col justify-center text-white text-left'
                     style={{backgroundColor: props.bgColor2, color: props.color}}
