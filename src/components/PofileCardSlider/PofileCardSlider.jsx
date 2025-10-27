@@ -53,21 +53,21 @@ const profileData = [
 
 function PofileCardSlider() {
 
-  
+
   function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <ArrowButtonLeft direction="left" onClick={onClick} ><img src={RoudLeftArrow}  alt="rightarror" /></ArrowButtonLeft>
+      <ArrowButtonLeft direction="left" onClick={onClick} ><img src={RoudLeftArrow} alt="rightarror" /></ArrowButtonLeft>
     );
   }
   function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <ArrowButtonRight direction="right" onClick={onClick} ><img src={RoudrightArrow}  alt="rightarror" /> </ArrowButtonRight>
-       
-      );
-    }
-    
+      <ArrowButtonRight direction="right" onClick={onClick} ><img src={RoudrightArrow} alt="rightarror" /> </ArrowButtonRight>
+
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: true,
@@ -75,15 +75,38 @@ function PofileCardSlider() {
     slidesToShow: 3,
     slidesToScroll: 3,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
-  
+
   return (
     <SliderWrapper>
       <Slider {...settings}>
-          {profileData.map((card) => (
-            <ProfileCard image={card?.image}  title={card.title} subTitle={card.subtitle} content={card.content} key={card.id} />
-          ))}
+        {profileData.map((card) => (
+          <ProfileCard image={card?.image} title={card.title} subTitle={card.subtitle} content={card.content} key={card.id} />
+        ))}
       </Slider>
     </SliderWrapper>
   );

@@ -17,7 +17,6 @@ const amenitiesSectInfo = {
     { icon: communityIcon, title: "Community centers and recreational areas" },
     { icon: servicesIcon, title: "Range of services offered" },
   ],
-  columns: 5
 }
 
 

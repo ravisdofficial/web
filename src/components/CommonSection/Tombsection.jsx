@@ -8,7 +8,6 @@ import { fadeScale, slideFromLeft, slideFromRight } from '../../helpers/animatio
 export default function Tombsection(props) {
 
     const [ref, isInView] = useScrollAnimation();
-
     return (
         <>
             <div className='tomb-container' style={{

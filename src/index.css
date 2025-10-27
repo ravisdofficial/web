@@ -35,3 +35,8 @@
     --font-poppins: "Poppins", sans-serif;
     --font-barlow: "Barlow", sans-serif;
   }
+
+  .green-color-with-vector {
+    background: url('/src/assets/bgVector/lines.png');
+    background-color: rgb(16, 77, 57);
+  }
