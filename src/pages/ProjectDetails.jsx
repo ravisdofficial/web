@@ -32,7 +32,6 @@ const amenitiesSectInfo = {
     { icon: starGazingIcon, title: "Star Grazing" },
     { icon: badmintonIcon, title: "Badminton" },
   ],
-  columns: 4,
 };
 
 export default function ProjectDetails() {

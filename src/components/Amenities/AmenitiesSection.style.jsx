@@ -22,28 +22,53 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Heading = styled.h2`
-  font-size: 1.75rem;
-  letter-spacing: 1px;
-  font-weight: 600;
+ font-family: "Maharlika", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
   color: #e5d9c7;
   text-transform: uppercase;
 `;
 
 export const SubHeading = styled.p`
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #d0cfcf;
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1rem;
-  color: #d0cfcf;
-  line-height: 1.6;
 `;
 
 export const AmenitiesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: repeat(${(props) => props.columns}, minmax(200px, 1fr));
+  gap: 2.5rem;
   justify-content: center;
+  justify-items: center;
+  align-items: start;
   margin-top: 2rem;
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
 `;
 
 export const AmenityCard = styled.div`
@@ -71,7 +96,13 @@ export const Icon = styled.img`
 `;
 
 export const Text = styled.p`
-  font-size: 0.95rem;
+ font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  text-align: center;
   color: #eaeaea;
   max-width: 250px;
 `;
