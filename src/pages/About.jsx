@@ -4,11 +4,11 @@ import CardSlider from '../components/CardSlider/CardSlider';
 import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
 import PofileCardSlider from '../components/PofileCardSlider/PofileCardSlider';
 import MissionVisionSection from '../components/MissionVisionSection/MissionVisionSection';
-
 import { PathSection, SectionTitle, PathSectionCards, SectionSubTitle } from './styles/page.styles';
 import OvelCard from '../components/OvelCard/OvelCard';
 import { AboutovalCards } from '../content/about';
 import {ProfileSliderSection } from './styles/page.styles'
+
 export default function About() {
   return (
     <>
@@ -20,7 +20,6 @@ export default function About() {
         bgEffect={true}
       />
       <MissionVisionSection />
-      <CardSlider1 />
       <PathSection >
         <SectionTitle>
           Our path towards progress
