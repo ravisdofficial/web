@@ -1,0 +1,83 @@
+.tomb-container {
+    height: 130vh;
+    position: relative;
+    text-align: center;
+}
+
+
+.tomb-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg) center center/cover no-repeat;
+    z-index: 0;
+}
+
+.uppertomb{
+    padding: 4rem 0;
+}
+
+.uppertomb img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 10px;
+}
+
+.tomb__heading{
+    font-size: 48px;
+    width: 40vw;
+    margin: 0 auto;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px !important;
+}
+
+.tomb__content{
+    font-size: 24px;
+    font-weight: lighter !important;
+    width: 40vw;
+    margin: 0 auto;
+}
+
+ .tombRectangle {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: 0 auto;
+     width: 60vw;
+     height: 55%;
+     border-top-left-radius: 1000000px;
+     border-top-right-radius: 1000000px;
+ }
+
+ .tombRectangle>img {
+     object-position: right center;
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-top-left-radius: 10000px;
+     border-top-right-radius: 10000px;
+ }
+
+ @media (width <=767px) {
+    .tomb-container {
+        height: 85vh;
+    }
+
+    .tomb__heading{
+        font-size: 1.5rem;
+        width: 90vw;
+    }
+
+    .tomb__content{
+        font-size: 1rem;
+        width: 80vw;
+    }
+
+    .tombRectangle {
+        width: 100vw;
+        height: 40%;
+    }
+ }

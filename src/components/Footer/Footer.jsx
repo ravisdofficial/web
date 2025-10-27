@@ -11,17 +11,22 @@ import {
   FooterItem,
   SocialIcon
 } from './footer.style';
+import MainLogo from "/src/assets/header/logo.png";
+import Youtube from '/src/assets/footer/youtube.png'
+import Instagram from '/src/assets/footer/instagram.png'
+import Twitter from '/src/assets/footer/twitter.png'
+import Facebook from '/src/assets/footer/facebook.png'
 
 const Footer = () => {
 
   return (
     <>
       <Connect content={"Fulfill your real estate aspirations now"}/>
-      <Container className="text-black px-4 mt-auto max-h-2">
+      <Container className="text-black px-4 mt-auto">
         <div className="container mx-auto px-4 py-4 flex justify-between">
           {/* LeftTop: Logo */}
           <Link to="/" className="text-2xl font-bold text-blue-600">
-            <Logo src="src/assets/header/logo.png" alt="Logo" />
+            <Logo src={MainLogo} alt="Logo" />
           </Link>
 
           {/* RightTop: Contact Us Button */}
@@ -46,26 +51,26 @@ const Footer = () => {
               <Link
                 to="https://www.youtube.com/channel/UCvjK6y-8a2MUEx_4Hqarjww"
               >
-                <SocialIcon src='src/assets/footer/youtube.png' alt="Youtube"></SocialIcon>
+                <SocialIcon src={Youtube} alt="Youtube"></SocialIcon>
               </Link>
               <Link
                 to="https://www.instagram.com/vibezestates/"
               >
-                <SocialIcon src='src/assets/footer/instagram.png' alt="Insta"></SocialIcon>
+                <SocialIcon src={Instagram} alt="Insta"></SocialIcon>
               </Link>
               <Link
                 to="https://x.com/i/flow/login?redirect_after_login=%2Fvibez_coffee"
               >
-                <SocialIcon src='src/assets/footer/twitter.png' alt="X"></SocialIcon>
+                <SocialIcon src={Twitter} alt="X"></SocialIcon>
               </Link>
               <Link
                 to="https://www.facebook.com/VibezEstates/"
               >
-                <SocialIcon src='src/assets/footer/facebook.png' alt="Facebook"></SocialIcon>
+                <SocialIcon src={Facebook} alt="Facebook"></SocialIcon>
               </Link>
             </div>
           </div>
-          <div className=" py-5 flex flex-row">
+          <div className="othersCont py-5 flex flex-row">
             <div className="md:mx-[40px] flex flex-col font-inter text-left text-sm">
               <FooterItem>About us</FooterItem>
               <FooterItem>Managed Farmlands</FooterItem>
