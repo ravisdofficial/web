@@ -2,40 +2,17 @@ import React from 'react';
 import Slider from 'react-slick';
 
 import SliderCardItem from '../SliderCardItem/SliderCardItem';
-import SliderImage1 from '../../assets/sliderglobal/sliderCard1.webp'
-import SliderImage2 from '../../assets/sliderglobal/sliderCard2.webp'
-import SliderImage3 from '../../assets/sliderglobal/sliderCard3.webp'
-import { SliderWrapper,
-Container,
-StyledSlider,
-ArrowsContainer,
-ArrowButton } from './CardSlider.styles';
+import {
+  SliderWrapper,
+  Container,
+  StyledSlider,
+  ArrowsContainer,
+  ArrowButton
+} from './CardSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
 
-
-const cardData = [
-  {
-    id: 1,
-    title: 'Award name ipsum dolor sit amet',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage1
-  },
-  {
-    id: 2,
-    title: 'Award name ipsum dolor sit amet',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage2
-  },
-  {
-    id: 3,
-    title: 'Lorem ipsum dolor sit amet',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage3
-  }
-];
-
-export default function Conatct() {
+export default function Conatct(props) {
   const sliderRef = React.useRef(null);
 
   const settings = {
@@ -77,17 +54,17 @@ export default function Conatct() {
   };
 
   return (
-    <SliderWrapper>
+    <SliderWrapper style={{ 'background': props.bgColor }}>
       <Container>
         <StyledSlider ref={sliderRef} {...settings}>
-          {cardData.map((card) => (
-            <SliderCardItem key={card.id} image={card?.image} title={card.title} content={card.content} />
+          {props.cardData.map((card) => (
+            <SliderCardItem key={card.id} image={card?.image} title={card.title} content={card.content} blur={props.blur}/>
           ))}
         </StyledSlider>
-        
+
         <ArrowsContainer>
-          <ArrowButton direction="left" onClick={goToPrev} ><img src={RoudLeftArrow}  alt="rightarror" /></ArrowButton>
-          <ArrowButton direction="right" onClick={goToNext} ><img src={RoudrightArrow}  alt="rightarror" /> </ArrowButton>
+          <ArrowButton direction="left" onClick={goToPrev} ><img src={RoudLeftArrow} alt="rightarror" /></ArrowButton>
+          <ArrowButton direction="right" onClick={goToNext} ><img src={RoudrightArrow} alt="rightarror" /> </ArrowButton>
         </ArrowsContainer>
       </Container>
     </SliderWrapper>

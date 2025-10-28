@@ -11,8 +11,33 @@ import { PathSection, SectionTitle, PathSectionCards, SectionSubTitle } from './
 import OvelCard from '../components/OvelCard/OvelCard';
 import { AboutovalCards } from '../content/about';
 import { ProfileSliderSection } from './styles/page.styles'
+import SliderImage1 from '../assets/sliderglobal/sliderCard1.webp'
+import SliderImage2 from '../assets/sliderglobal/sliderCard2.webp'
+import SliderImage3 from '../assets/sliderglobal/sliderCard3.webp'
 
 export default function About() {
+
+  const cardData = [
+  {
+    id: 1,
+    title: 'Award name ipsum dolor sit amet',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image: SliderImage1
+  },
+  {
+    id: 2,
+    title: 'Award name ipsum dolor sit amet',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image: SliderImage2
+  },
+  {
+    id: 3,
+    title: 'Lorem ipsum dolor sit amet',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    image: SliderImage3
+  }
+];
+
   return (
     <>
       <Banner
@@ -43,7 +68,7 @@ export default function About() {
           }
         </PathSectionCards>
       </PathSection>
-      <CardSlider />
+      <CardSlider cardData={cardData} bgColor={"#DDD7CB"}/>
       <ProfileSliderSection className="green-color-with-vector">
         <PofileCardSlider />
       </ProfileSliderSection>

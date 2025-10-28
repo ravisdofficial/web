@@ -1,17 +1,22 @@
 import React from "react";
-import { Card,
-Image,
-Body,
-Title,
-Content, } from './SliderCardItem.styles'
+import {
+  Card,
+  Image,
+  Body,
+  Title,
+  Content,
+  BlurImg
+} from './SliderCardItem.styles'
 
-const SliderCardItem = ({ image, title, subTitle = '', content }) => {
+const SliderCardItem = ({ image, title, subTitle = '', content, blur }) => {
   return (
     <Card>
-      <Image src={image} alt={title} />
+      {blur ? <BlurImg src={image} alt={title}/> :
+        <Image src={image} alt={title} />
+      }
       <Body>
         <Title>{title}</Title>
-        { subTitle &&<SubTitle>{subTitle}</SubTitle>}
+        {subTitle && <SubTitle>{subTitle}</SubTitle>}
         <Content>{content}</Content>
       </Body>
     </Card>

@@ -18,6 +18,11 @@ import InvestSection from "../components/FloorPlan/InvestSection";
 import Tombsection from '/src/components/CommonSection/Tombsection';
 import Flower from '/src/assets/section2/flower.png';
 import Kaira from '/src/assets/home/kaira.png';
+import CardSlider from '../components//CardSlider/CardSlider';
+import SliderImage1 from '../assets/sliderglobal/sliderCard1.webp'
+import SliderImage2 from '../assets/sliderglobal/sliderCard2.webp'
+import SliderImage3 from '../assets/sliderglobal/sliderCard3.webp'
+import ProjectSlider from '../components/ProjectSilder/ProjectSlider';
 
 const amenitiesSectInfo = {
   heading: "Amenities",
@@ -39,6 +44,22 @@ const amenitiesSectInfo = {
 };
 
 export default function ProjectDetails() {
+
+    const cardData = [
+    {
+      id: 1,
+      image: SliderImage1
+    },
+    {
+      id: 2,
+      image: SliderImage2
+    },
+    {
+      id: 3,
+      image: SliderImage3
+    }
+  ];
+
   return (
     <>
       <Banner
@@ -47,13 +68,14 @@ export default function ProjectDetails() {
         content="Location: Sakleshpur"
         button="Status: Now Selling"
       />
-      <Tombsection bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Kaira} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true}/>
+      <Tombsection bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Kaira} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true} />
       <AmenitiesSection
         heading={amenitiesSectInfo.heading}
         subHeading={amenitiesSectInfo.subHeading}
         amenitiesData={amenitiesSectInfo.amenitiesData}
       />
       <FloorPlans />
+      <ProjectSlider heading={"NEARBY ATTRACTIONS"} cardData={cardData} color={"black"} bgColor={"#DDD7CB"}/>
       <InvestSection />
     </>
   );

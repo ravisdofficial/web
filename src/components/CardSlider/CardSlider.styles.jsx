@@ -3,11 +3,9 @@ import Slider from 'react-slick';
 
 export const SliderWrapper = styled.div`
   width: 100%;
-  background: #d4c5b0;
-  padding: 60px 0 80px;
+  padding: 60px 0;
   overflow: hidden;
   position: relative;
-  background: white;
 `;
 
 export const Container = styled.div`
