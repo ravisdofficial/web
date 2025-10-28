@@ -29,6 +29,7 @@ const Home = () => {
         btnLine={"Discover farmlands"}
         description={"Call a piece of paradise, yours. We offer diverse investment options like coffee plantations and teakwood groves. Our experts manage every aspect of your farm, from planting to sales, focusing on sustainable practices that protect your investment and the environment."}
         color={"#FFFFFF"}
+        link={"/farmland"}
       />
 
       <CardOne rev={false}
@@ -40,6 +41,7 @@ const Home = () => {
         btnLine={"Explore luxury"}
         description={"Unveil the art of luxury living and immerse yourself in the tranquility of luxury villas and resorts. Each villa and resort offers a unique escape into indulgence and natural beauty, with world-class amenities designed to rejuvenate your spirit and enhance your lifestyle."}
         color={"#000000"}
+        link={"/villa"}
       />
 
       <CardOne rev={true}
@@ -50,11 +52,14 @@ const Home = () => {
         heading={"Revenue Generation"}
         btnLine={"Learn More"}
         description={"Your investment should work as hard as you do. Our strategic rental programs and expert property management ensure your villa or resort generates competitive returns, with transparency and ease."}
-        color={"#FFFFFF"} />
+        color={"#FFFFFF"} 
+        link={"/revenue"}
+        />
         <VibezSection />
       <Tombsection bgColor={"#104D39"} bgTheme="green-color-with-vector" color={'white'} logo={Flower} imgSrc={Scenery} btn={true} BG={BG}
       heading={"Discover our latest ventures."} content={"Explore upcoming real estate developments and investment opportunities."} btnText={"Discover Farmlands"}
       fontStyle={"font-poppins"}
+      link={"/farmland"}
       />
 
     </>

@@ -8,6 +8,7 @@ import {
     fadeScale,
     fadeUp,
 } from '../../helpers/animationhelper';
+import { Link } from 'react-router-dom';
 
 export default function CardOne(props) {
     const [ref, isInView] = useScrollAnimation();
@@ -77,7 +78,9 @@ export default function CardOne(props) {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        {props.btnLine}
+                        <Link to={props.link}>
+                            {props.btnLine}
+                        </Link>
                     </motion.button>}
                 </motion.div>
             </div>

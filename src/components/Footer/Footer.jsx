@@ -1,6 +1,6 @@
 import './footer.css';
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Connect from '../Connect/Connect';
 import {
   Container,
@@ -16,12 +16,16 @@ import Youtube from '/src/assets/footer/youtube.png'
 import Instagram from '/src/assets/footer/instagram.png'
 import Twitter from '/src/assets/footer/twitter.png'
 import Facebook from '/src/assets/footer/facebook.png'
+import Field from '/src/assets/home/openfield.webp'
 
 const Footer = () => {
+  
+  const { pathname } = useLocation();
 
   return (
     <>
-      <Connect content={"Fulfill your real estate aspirations now"}/>
+      <Connect content={"Fulfill your real estate aspirations now"} heading={"CONNECT WITH US"} bgColor={"#F2EFEC"} btnText={"Get in Touch"} color={"black"}/>
+      {pathname==="/revenue" && <Connect content={"Experience the Vibez difference. Click the button below to book a demo and learn more about our offerings."} heading={"Book a Demo"} btnText={"Book a Demo now"} bg={Field} color={"white"}/>}
       <Container className="text-black px-4 mt-auto">
         <div className="container mx-auto px-4 py-4 flex justify-between">
           {/* LeftTop: Logo */}
@@ -34,9 +38,11 @@ const Footer = () => {
             <p className="mb-5">
               +91 8152 88 33 88
             </p>
-            <Mail>
-              info@vibezclub.com
-            </Mail>
+            <Link to="/contact">
+              <Mail>
+                info@vibezclub.com
+              </Mail>
+            </Link>
           </div>
         </div>
         <LineBreak />

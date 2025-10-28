@@ -35,18 +35,18 @@ const Header = () => {
     <header className="bg-white shadow-md fixed w-full z-50">
       <HeaderContainer className="container mx-auto px-4 py-3">
         {/* Left: Logo */}
-        <Link to="/" className="text-2xl font-bold text-blue-600">
+        <Link to="/" className="text-2xl font-bold text-black-600 cursor-pointer">
           <Logo src={LogoImg} alt="Logo" />
         </Link>
 
         {/* Center: Menu for Desktop */}
         <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
-          <Link to="/about" className="hover:text-blue-600 transition font-inter">About Us</Link>
-          <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
-          <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
-          <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
-          {/* <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
-          <Link to="/blog" className="hover:text-blue-600 transition">Blog</Link> */}
+          <Link to="/about" className="hover:text-black-600 transition font-inter cursor-pointer">About Us</Link>
+          <Link to="/farmland" className="flex flex-row hover:text-black-600 transition font-inter cursor-pointer">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+          <Link to="/project" className="flex flex-row hover:text-black-600 transition font-inter cursor-pointer">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+          <Link to="/revenue" className="hover:text-black-600 transition font-inter cursor-pointer">Revenue Generation</Link>
+          {/* <Link to="/services" className="hover:text-black-600 transition">Services</Link>
+          <Link to="/blog" className="hover:text-black-600 transition">Blog</Link> */}
         </nav>
 
         {/* Hamburger Button (Mobile) */}
@@ -73,10 +73,10 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="flex flex-col p-4 space-y-3 text-gray-700 font-medium">
-            <Link to="/" onClick={toggleMenu} className="hover:text-blue-600 transition">Home</Link>
-            <Link to="/team" className="flex flex-row hover:text-blue-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
-            <Link to="/projects" className="flex flex-row hover:text-blue-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
-            <Link to="/projects" className="hover:text-blue-600 transition font-inter">Revenue Generation</Link>
+            <Link to="/" onClick={toggleMenu} className="hover:text-black-600 transition">Home</Link>
+            <Link to="/farmland" className="flex flex-row hover:text-black-600 transition font-inter">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+            <Link to="/project" className="flex flex-row hover:text-black-600 transition font-inter">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+            <Link to="/revenue" className="hover:text-black-600 transition font-inter">Revenue Generation</Link>
           </nav>
         </div>
       )}

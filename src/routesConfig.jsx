@@ -12,8 +12,8 @@ import RevenueDetail from './pages/RevenueDetail'
   { path: '/about', element: <About />,meta :{ title: 'About Us'} },
   { path: '/villa', element: <VillaContent />, meta: { title: 'Villa' } },
   { path: '/farmland', element: <FarmlandPage />, meta: { title: 'Farmland' } },
-  { path: '/projectDetails', element: <ProjectDetails />, meta: { title: 'Project Details' } },
-  { path: '/revenueDetails', element: <RevenueDetail />, meta: { title: 'Revenue Details' } },
+  { path: '/project', element: <ProjectDetails />, meta: { title: 'Project Details' } },
+  { path: '/revenue', element: <RevenueDetail />, meta: { title: 'Revenue Details' } },
   { path: '/contact', element: <Contact />, meta : {title: 'Contact'} },
     ]
 

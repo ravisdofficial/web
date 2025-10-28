@@ -108,3 +108,4 @@ export const Text = styled.p`
   color: #eaeaea;
   max-width: 250px;
 `;
+

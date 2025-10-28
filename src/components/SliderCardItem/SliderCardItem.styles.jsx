@@ -6,11 +6,20 @@ export const Card = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  max-height: 415px;
-      min-height: 413px;
-  object-fit: cover;
+width: 100%;
+max-height: 415px;
+min-height: 413px;
+object-fit: cover;
 `;
+
+export const BlurImg = styled.img`
+width: 100%;
+max-height: 415px;
+min-height: 413px;
+object-fit: cover;
+mask-image: linear-gradient(to right, #00000060, black 5%, black 95%, #00000060);
+mask-repeat: no-repeat;
+`
 
 export const Body = styled.div`
   padding: 16px 0;
