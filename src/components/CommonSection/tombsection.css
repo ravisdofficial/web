@@ -10,7 +10,7 @@
     position: absolute;
     inset: 0;
     background: var(--bg) center center/cover no-repeat;
-    z-index: 0;
+    z-index: -10;
 }
 
 .uppertomb {

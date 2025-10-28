@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <>
-      <Connect content={"Fulfill your real estate aspirations now"}/>
+      <Connect content={"Fulfill your real estate aspirations now"} />
       <Container className="text-black px-4 mt-auto">
         <div className="container mx-auto px-4 py-4 flex justify-between">
           {/* LeftTop: Logo */}
@@ -34,9 +34,11 @@ const Footer = () => {
             <p className="mb-5">
               +91 8152 88 33 88
             </p>
-            <Mail>
-              info@vibezclub.com
-            </Mail>
+            <Link to="/contact">
+              <Mail>
+                info@vibezclub.com
+              </Mail>
+            </Link>
           </div>
         </div>
         <LineBreak />

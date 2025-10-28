@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import { fadeScale, slideFromLeft, slideFromRight } from '../../helpers/animationhelper';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export default function Tombsection(props) {
 
@@ -46,26 +47,30 @@ export default function Tombsection(props) {
                         variants={fadeScale(0.3)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs max-w-fit cardBtn'>{props.btnText}</motion.button>}
+                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs max-w-fit cardBtn'>
+                        <Link to={props.link}>
+                            {props.btnText}
+                        </Link>
+                    </motion.button>}
                 </div>
                 {props.kaira && <div className='areaSection'>
                     <div>
                         <p>Plot Size</p>
                         <p>3000 sqft</p>
                     </div>
-                    <HorizontalLine/>
+                    <HorizontalLine />
                     <div>
                         <p>Built Area</p>
                         <p>210763 sqft</p>
                     </div>
-                    <HorizontalLine/>
+                    <HorizontalLine />
                     <div>
                         <p>Bedrooms</p>
                         <p>3</p>
                     </div>
                 </div>}
                 <div className={`tombRectangle ${props.kaira ? 'kairaMode' : ''}`}
-                    >
+                >
                     <motion.img
                         variants={fadeScale(0.3)}
                         initial="hidden"
