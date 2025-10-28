@@ -13,7 +13,7 @@
     z-index: 0;
 }
 
-.uppertomb{
+.uppertomb {
     padding: 4rem 0;
 }
 
@@ -23,7 +23,7 @@
     margin: 0 auto 10px;
 }
 
-.tomb__heading{
+.tomb__heading {
     font-size: 2.5rem;
     width: 50vw;
     margin: 0 auto;
@@ -34,63 +34,101 @@
     margin-bottom: 10px !important;
 }
 
-.tomb__subheading{
+.tomb__subheading {
     font-size: 1rem;
     font-weight: bold !important;
     width: 40vw;
-    margin:  00 auto;
+    margin: 00 auto;
     margin-top: 30px !important;
     margin-bottom: 30px !important;
     color: var(--subHeadColor);
 }
 
-.tomb__content{
+.tomb__content {
     font-size: 1rem;
     font-weight: lighter !important;
     width: 40vw;
     margin: 0 auto;
 }
 
- .tombRectangle {
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     margin: 0 auto;
-     width: 60vw;
-     height: 55%;
-     border-top-left-radius: 51%;
-     border-top-right-radius: 51%;
-     overflow: hidden;
- }
+.tombRectangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 60vw;
+    height: 55%;
+    border-top-left-radius: 51%;
+    border-top-right-radius: 51%;
+    overflow: hidden;
+    padding-top: var(--pt);
+}
 
- .tombRectangle>img {
-     object-position: center;
-     display: block;
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-     border-top-left-radius: 51%;
-     border-top-right-radius: 51%;
- }
+.tombRectangle>img {
+    object-position: center;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 51%;
+    border-top-right-radius: 51%;
+}
 
- @media (width <=767px) {
+.areaSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    margin: 0 auto;
+
+    & div p:nth-child(2) {
+        font-weight: bold;
+    }
+}
+
+.tombRectangle.kairaMode {
+    padding-top: 30px;
+    height: 55%;
+    width: 50%;
+}
+
+
+@media (width <=767px) {
+
+    
     .tomb-container {
         height: 130vh;
     }
-
-    .tomb__heading{
+    
+    .tomb__heading {
         font-size: 1.5rem;
         width: 90vw;
     }
-
-    .tomb__content{
+    
+    .tomb__content {
         font-size: 1rem;
         width: 80vw;
     }
-
+    
     .tombRectangle {
         width: 100vw;
         height: 55%;
     }
- }
+}
+@media (width<= 1150px) {
+    .kairaMode{
+        width: fit-content;
+    }
+    
+    .tombRectangle.kairaMode {
+        padding-top: 30px;
+        height: 55%;
+        width: 75%;
+    }
+    
+    .uppertomb {
+        padding: 2rem 0;
+    }
+}

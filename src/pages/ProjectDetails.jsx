@@ -15,6 +15,9 @@ import starGazingIcon from "../assets/amenities/starGazingIcon.png";
 import badmintonIcon from "../assets/amenities/badmintonIcon.png";
 import FloorPlans from "../components/FloorPlan/Floorplan";
 import InvestSection from "../components/FloorPlan/InvestSection";
+import Tombsection from '/src/components/CommonSection/Tombsection';
+import Flower from '/src/assets/section2/flower.png';
+import Kaira from '/src/assets/home/kaira.png';
 
 const amenitiesSectInfo = {
   heading: "Amenities",
@@ -44,7 +47,7 @@ export default function ProjectDetails() {
         content="Location: Sakleshpur"
         button="Status: Now Selling"
       />
-
+      <Tombsection bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Kaira} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true}/>
       <AmenitiesSection
         heading={amenitiesSectInfo.heading}
         subHeading={amenitiesSectInfo.subHeading}
