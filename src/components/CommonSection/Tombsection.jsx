@@ -16,9 +16,7 @@ export default function Tombsection(props) {
     const [ref, isInView] = useScrollAnimation();
     return (
         <>
-            <div className='tomb-container' style={{
-                '--bg': `url(${props.BG})`,
-                'backgroundColor': props.bgColor,
+            <div className={`${props.bgTheme} tomb-container`} style={{
                 'color': props.color
             }}
                 ref={ref}>

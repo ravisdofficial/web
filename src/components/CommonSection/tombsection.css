@@ -96,8 +96,6 @@
 
 
 @media (width <=800px) {
-
-    
     .tomb-container {
         height: 130vh;
     }
@@ -120,7 +118,7 @@
     
     .tombRectangle {
         width: 100vw;
-        height: 55%;
+        height: 50%;
     }
 
     .areaSection{
@@ -146,7 +144,7 @@
 @media (width<460px) {
      .tombRectangle.kairaMode {
         padding-top: 30px;
-        height: 45%;
+        height: 50%;
         width: 100%;
     }
 }

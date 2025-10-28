@@ -1,8 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import SliderImage1 from '../../assets/sliderglobal/sliderCard1.webp'
-import SliderImage2 from '../../assets/sliderglobal/sliderCard2.webp'
-import SliderImage3 from '../../assets/sliderglobal/sliderCard3.webp'
+import titleFlower from '../../assets/bgVector/flower.png'
 import { SliderWrapper,
 Container,
 StyledSlider,
@@ -13,36 +11,10 @@ Title,
 Content, ArrowButtonRight, ArrowButtonLeft } from './ZigZagSlider.styles';
 import RoudLeftArrow from '../../assets/sliderglobal/rounded-left-arrow.png';
 import RoudrightArrow from '../../assets/sliderglobal/rounded-right-arrow.png';
+import TitleWithImage from '../TitleWithImage/TitleWithImage';
 
 
-const cardData = [
-  {
-    id: 1,
-    title: 'Project 1',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage1
-  },
-  {
-    id: 2,
-    title: 'Project 2',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage2
-  },
-  {
-    id: 3,
-    title: 'Prject 3',
-    content: 'Prject 2, consectetur adipiscing elit',
-    image: SliderImage3
-  },
-  {
-    id: 4,
-    title: 'Prject 4',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    image: SliderImage3
-  }
-];
-
-export default function ZigZagSlider() {
+export default function ZigZagSlider({cardData, bgImage, title}) {
   const sliderRef = React.useRef(null);
 
     function NextArrow(props) {
@@ -111,7 +83,8 @@ export default function ZigZagSlider() {
   };
 
   return (
-    <SliderWrapper>
+    <SliderWrapper $bgImage={bgImage}>
+      <TitleWithImage title={title} image={titleFlower}/>
       <Container>
         <StyledSlider ref={sliderRef} {...settings}>
           {cardData.map((card) => (

@@ -8,6 +8,7 @@ export const Card = styled.div`
 export const Image = styled.img`
   width: 100%;
   max-height: 415px;
+      min-height: 413px;
   object-fit: cover;
 `;
 

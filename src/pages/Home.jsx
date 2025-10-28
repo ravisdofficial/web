@@ -2,7 +2,7 @@ import React from "react";
 import FullSlider from "../components/FullSlider/FullSlider";
 import CardOne from '../components/Card/CardOne';
 import Section1 from '../components/Section/Section1';
-import CherryImg from '/src/assets/cards/cherry.webp';
+import CherryImg from '../assets/cards/cherry.webp';
 import Vector1Img from '/src/assets/cards/vector1.webp';
 import RoomImg from '/src/assets/cards/room.webp';
 import LuxuryImg from '/src/assets/cards/luxury.webp';
@@ -10,8 +10,8 @@ import ChessImg from '/src/assets/cards/chess.webp';
 import VectorImg from '/src/assets/cards/vector.webp';
 import Scenery from '/src/assets/section2/scenery.jpg';
 import Flower from '/src/assets/section2/flower.png';
-import Tombsection from "/src/components/CommonSection/Tombsection";
-import VibezSection from "/src/components/VibezSection/VibezSection";
+import Tombsection from "../components/CommonSection/Tombsection";
+import VibezSection from "../components/VibezSection/VibezSection";
 import BG from '/src/assets/bgVector/lines.png';
 
 const Home = () => {
@@ -52,7 +52,7 @@ const Home = () => {
         description={"Your investment should work as hard as you do. Our strategic rental programs and expert property management ensure your villa or resort generates competitive returns, with transparency and ease."}
         color={"#FFFFFF"} />
         <VibezSection />
-      <Tombsection bgColor={"#104D39"} color={'white'} logo={Flower} imgSrc={Scenery} btn={true} BG={BG}
+      <Tombsection bgColor={"#104D39"} bgTheme="green-color-with-vector" color={'white'} logo={Flower} imgSrc={Scenery} btn={true} BG={BG}
       heading={"Discover our latest ventures."} content={"Explore upcoming real estate developments and investment opportunities."} btnText={"Discover Farmlands"}
       fontStyle={"font-poppins"}
       />

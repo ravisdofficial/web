@@ -6,7 +6,12 @@ import storageIcon from "../assets/amenities/storageIcon.png";
 import securityIcon from "../assets/amenities/securityIcon.png";
 import communityIcon from "../assets/amenities/communityIcon.png";
 import servicesIcon from "../assets/amenities/servicesIcon.png";
-
+import SericeSliderSection from '../components/ServicesSlider/ServiceSliderSection';
+import { SericeSliderWrapper, TestimonialSliderWraper, ZigZagSliderWraper } from './styles/page.styles'
+import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
+import zigZagBgimage from '../assets/farmland/bg1.jpg'
+import TestimonialSlider from '../components/TestimonialSlider/TestimonialSlider';
+import { servicesSliderData, villaTestinmonials, ProjectSliderData} from '../content/farmland';
 const amenitiesSectInfo = {
   heading: "Amenities That Grow With You",
   subHeading: "From crop selection, and planting to harvesting and marketing, we provide a comprehensive set of services.",
@@ -28,6 +33,7 @@ export default function FarmlandPage() {
         title="Embrace the bounty of the land"
         content="Discover the sustainable elegance of managed farmlands, where investment meets tranquility"
         button=""
+        bgEffect={true}
       />
       <CommonSubBanner
         image="src/assets/home/banner4_farmland.webp"
@@ -36,7 +42,16 @@ export default function FarmlandPage() {
         boldContent = {`Experience the peace of rural living, coupled with the perks of modern, sustainable practices.`}
        amenitiesSectInfo={amenitiesSectInfo}
       />
-      
+           <SericeSliderWrapper>
+        <SericeSliderSection sliderData={servicesSliderData} title={"Seamless services for agricultural needs"} />
+      </SericeSliderWrapper>
+      <TestimonialSliderWraper>
+
+      <TestimonialSlider cardData={villaTestinmonials} />
+      </TestimonialSliderWraper>
+      <ZigZagSliderWraper>
+          <ZigZagSlider cardData={ProjectSliderData} title="Explore farmland projects" bgImage={zigZagBgimage}/>
+      </ZigZagSliderWraper>
       </>
   );
 }
