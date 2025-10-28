@@ -95,7 +95,7 @@
 }
 
 
-@media (width <=767px) {
+@media (width <=800px) {
 
     
     .tomb-container {
@@ -103,32 +103,50 @@
     }
     
     .tomb__heading {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         width: 90vw;
     }
     
     .tomb__content {
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: 80vw;
+    }
+    
+    .tombRectangle.kairaMode {
+        padding-top: 30px;
+        height: 70vh;
+        width: 100%;
     }
     
     .tombRectangle {
         width: 100vw;
         height: 55%;
     }
+
+    .areaSection{
+        width: 90vw;
+    }
 }
-@media (width<= 1150px) {
+@media (800px < width<= 1150px) {
     .kairaMode{
         width: fit-content;
     }
     
     .tombRectangle.kairaMode {
         padding-top: 30px;
-        height: 55%;
-        width: 75%;
+        height: 50%;
+        width: 55%;
     }
     
     .uppertomb {
         padding: 2rem 0;
+    }
+}
+
+@media (width<460px) {
+     .tombRectangle.kairaMode {
+        padding-top: 30px;
+        height: 45%;
+        width: 100%;
     }
 }
