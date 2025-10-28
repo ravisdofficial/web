@@ -4,10 +4,12 @@ import routesConfig from "./routesConfig";
 import MainLayout from './components/Layout/MainLayout';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ScrolltoTop from './ScrolltoTop';
 
 export default function App() {
   return (
     <Router>
+      <ScrolltoTop/>
       <Routes>
         {routesConfig.map(({ path, element, meta }) => (
           <Route

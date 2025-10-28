@@ -53,7 +53,7 @@ const Home = () => {
         btnLine={"Learn More"}
         description={"Your investment should work as hard as you do. Our strategic rental programs and expert property management ensure your villa or resort generates competitive returns, with transparency and ease."}
         color={"#FFFFFF"} 
-        link={"/revenueDetails"}
+        link={"/revenue"}
         />
         <VibezSection />
       <Tombsection bgColor={"#104D39"} bgTheme="green-color-with-vector" color={'white'} logo={Flower} imgSrc={Scenery} btn={true} BG={BG}
