@@ -1,9 +1,19 @@
 .tomb-container {
+    height: 130vh;
     position: relative;
     text-align: center;
 }
 
-.uppertomb{
+
+.tomb-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg) center center/cover no-repeat;
+    z-index: 0;
+}
+
+.uppertomb {
     padding: 4rem 0;
 }
 
@@ -11,10 +21,9 @@
     width: 3rem;
     height: 3rem;
     margin: 0 auto 10px;
-    
 }
 
-.tomb__heading{
+.tomb__heading {
     font-size: 2.5rem;
     width: 50vw;
     margin: 0 auto;
@@ -25,63 +34,117 @@
     margin-bottom: 10px !important;
 }
 
-.tomb__subheading{
+.tomb__subheading {
     font-size: 1rem;
     font-weight: bold !important;
     width: 40vw;
-    margin:  00 auto;
+    margin: 00 auto;
     margin-top: 30px !important;
     margin-bottom: 30px !important;
     color: var(--subHeadColor);
 }
 
-.tomb__content{
+.tomb__content {
     font-size: 1rem;
     font-weight: lighter !important;
     width: 40vw;
     margin: 0 auto;
 }
 
- .tombRectangle {
+.tombRectangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 60vw;
+    height: 55%;
+    border-top-left-radius: 51%;
+    border-top-right-radius: 51%;
+    overflow: hidden;
+    padding-top: var(--pt);
+}
 
-     bottom: 0;
-     left: 0;
-     right: 0;
-     margin: 0 auto;
-     width: 60vw;
-     height: 55%;
-     border-top-left-radius: 10000px;
-     border-top-right-radius: 10000px;
-     overflow: hidden;
- }
+.tombRectangle>img {
+    object-position: center;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 51%;
+    border-top-right-radius: 51%;
+}
 
- .tombRectangle>img {
-     object-position: center;
-     display: block;
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-     border-top-left-radius: 10000px;
-     border-top-right-radius: 10000px;
- }
+.areaSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    margin: 0 auto;
 
- @media (width <=767px) {
-    .tomb-container {
-    
+    & div p:nth-child(2) {
+        font-weight: bold;
     }
+}
 
-    .tomb__heading{
-        font-size: 1.5rem;
+.tombRectangle.kairaMode {
+    padding-top: 30px;
+    height: 55%;
+    width: 50%;
+}
+
+
+@media (width <=800px) {
+    .tomb-container {
+        height: 130vh;
+    }
+    
+    .tomb__heading {
+        font-size: 1.2rem;
         width: 90vw;
     }
-
-    .tomb__content{
-        font-size: 1rem;
+    
+    .tomb__content {
+        font-size: 0.8rem;
         width: 80vw;
     }
-
+    
+    .tombRectangle.kairaMode {
+        padding-top: 30px;
+        height: 70vh;
+        width: 100%;
+    }
+    
     .tombRectangle {
         width: 100vw;
-        height: 55%;
+        height: 50%;
     }
- }
+
+    .areaSection{
+        width: 90vw;
+    }
+}
+@media (800px < width<= 1150px) {
+    .kairaMode{
+        width: fit-content;
+    }
+    
+    .tombRectangle.kairaMode {
+        padding-top: 30px;
+        height: 50%;
+        width: 55%;
+    }
+    
+    .uppertomb {
+        padding: 2rem 0;
+    }
+}
+
+@media (width<460px) {
+     .tombRectangle.kairaMode {
+        padding-top: 30px;
+        height: 50%;
+        width: 100%;
+    }
+}

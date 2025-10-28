@@ -4,8 +4,14 @@ import CommonCard from '../CommonCard/CommonCard';
 import { motion } from 'framer-motion';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
 import { fadeScale, slideFromLeft, slideFromRight } from '../../helpers/animationhelper';
+import styled from 'styled-components';
 
 export default function Tombsection(props) {
+
+    const HorizontalLine = styled.hr`
+        width: 50px;
+        rotate: 90deg
+    `
 
     const [ref, isInView] = useScrollAnimation();
     return (
@@ -23,7 +29,7 @@ export default function Tombsection(props) {
                         className='font-maharlika tomb__heading' >{props.heading}</motion.p>
 
                     {props.subHeading && <motion.p className="props.fontStyle tomb__subheading mb-20"
-                    style={{color: props.subHeadColor}}
+                        style={{ color: props.subHeadColor }}
                         variants={slideFromRight()}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
@@ -40,9 +46,26 @@ export default function Tombsection(props) {
                         variants={fadeScale(0.3)}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs formax-w-fit cardBtn'>{props.btnText}</motion.button>}
+                        className='font-maharlika button border cursor-pointer mt-4 px-16 py-4 text-xs max-w-fit cardBtn'>{props.btnText}</motion.button>}
                 </div>
-                <div className='tombRectangle '>
+                {props.kaira && <div className='areaSection'>
+                    <div>
+                        <p>Plot Size</p>
+                        <p>3000 sqft</p>
+                    </div>
+                    <HorizontalLine/>
+                    <div>
+                        <p>Built Area</p>
+                        <p>210763 sqft</p>
+                    </div>
+                    <HorizontalLine/>
+                    <div>
+                        <p>Bedrooms</p>
+                        <p>3</p>
+                    </div>
+                </div>}
+                <div className={`tombRectangle ${props.kaira ? 'kairaMode' : ''}`}
+                    >
                     <motion.img
                         variants={fadeScale(0.3)}
                         initial="hidden"
