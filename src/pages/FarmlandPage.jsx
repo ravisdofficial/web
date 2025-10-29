@@ -11,7 +11,13 @@ import { SericeSliderWrapper, TestimonialSliderWraper, ZigZagSliderWraper } from
 import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
 import zigZagBgimage from '../assets/farmland/bg1.jpg'
 import TestimonialSlider from '../components/TestimonialSlider/TestimonialSlider';
-import { servicesSliderData, villaTestinmonials, ProjectSliderData} from '../content/farmland';
+import { servicesSliderData, villaTestinmonials, ProjectSliderData } from '../content/farmland';
+import CardOne from '../components/Card/CardOne';
+import farmlandContact from '../assets/home/farmlandContact.jpg';
+import farm from '../assets/home/farm.png';
+import farm1 from '../assets/home/farm1.png';
+import farm2 from '../assets/home/farm2.png';
+
 const amenitiesSectInfo = {
   heading: "Amenities That Grow With You",
   subHeading: "From crop selection, and planting to harvesting and marketing, we provide a comprehensive set of services.",
@@ -39,19 +45,36 @@ export default function FarmlandPage() {
         image="src/assets/home/banner4_farmland.webp"
         title="Sustainable investments, serene living"
         content={`At Vibez Estates, we blend investment opportunities with a lifestyle enriched by nature. Our managed farmlands offer a unique chance to own and profit from agricultural land without the hassle of day-to-day management.`}
-        boldContent = {`Experience the peace of rural living, coupled with the perks of modern, sustainable practices.`}
-       amenitiesSectInfo={amenitiesSectInfo}
+        boldContent={`Experience the peace of rural living, coupled with the perks of modern, sustainable practices.`}
+        amenitiesSectInfo={amenitiesSectInfo}
       />
-           <SericeSliderWrapper>
+      <SericeSliderWrapper>
         <SericeSliderSection sliderData={servicesSliderData} title={"Seamless services for agricultural needs"} />
       </SericeSliderWrapper>
       <TestimonialSliderWraper>
 
-      <TestimonialSlider cardData={villaTestinmonials} />
+        <TestimonialSlider cardData={villaTestinmonials} />
       </TestimonialSliderWraper>
       <ZigZagSliderWraper>
-          <ZigZagSlider cardData={ProjectSliderData} title="Explore farmland projects" bgImage={zigZagBgimage}/>
+        <ZigZagSlider cardData={ProjectSliderData} title="Explore farmland projects" bgImage={zigZagBgimage} />
       </ZigZagSliderWraper>
-      </>
+      <CardOne
+        rev={true}
+        bgColor="#E7E2DA"
+        bgColor2="#6B3E1D"
+        color="#FFFFFF"
+        isFullBg={true}
+        bgColorFullBg="#F2EFEC"
+        img1={farmlandContact}
+        isUnique={true}
+        heading="ROOTED IN EXPERTISE, GROWING IN INNOVATION"
+        uniqueItems={[
+          { icon: farm, text: 'Proven expertise in sustainable farming and real estate' },
+          { icon: farm1, text: 'Commitment to eco-friendly practices and advanced agricultural technology' },
+          { icon: farm2, text: 'Competitive returns on investment with a focus on sustainability and development' },
+        ]}
+      />
+
+    </>
   );
 }
