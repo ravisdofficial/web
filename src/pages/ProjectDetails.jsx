@@ -23,6 +23,9 @@ import SliderImage1 from '../assets/sliderglobal/sliderCard1.webp'
 import SliderImage2 from '../assets/sliderglobal/sliderCard2.webp'
 import SliderImage3 from '../assets/sliderglobal/sliderCard3.webp'
 import ProjectSlider from '../components/ProjectSilder/ProjectSlider';
+import CardOne from '../components/Card/CardOne';
+import projectDetailContact from '../assets/home/projectDetailContact.jpg';
+import LuxuryImg from '../assets/cards/luxury.webp';
 
 const amenitiesSectInfo = {
   heading: "Amenities",
@@ -77,6 +80,17 @@ export default function ProjectDetails() {
       <FloorPlans />
       <ProjectSlider heading={"NEARBY ATTRACTIONS"} cardData={cardData} color={"black"} bgColor={"#DDD7CB"}/>
       <InvestSection />
+       <CardOne rev={false}
+        bgColor={"#E7EDEB"}
+        bgColor2={"#134F3C"}
+        img1={projectDetailContact}
+        img2={LuxuryImg}
+        heading={"Luxury. Sustainability. Nature"}
+        description={`At Vibez Estates, we don't just sell properties; we offer unique lifestyles in harmony with nature. Learn more about our vision and commitment to luxury real estate.
+`}
+        btnLine={"Learn more"}
+        color={"#F2EFEC"}
+      />
     </>
   );
 }

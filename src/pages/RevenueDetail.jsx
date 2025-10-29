@@ -21,6 +21,7 @@ export default function RevenueDetail() {
         bgColor={"#DDD7CB"}
         isFullBg={true}
         bgColor2={"#7B492E"}
+        bgColorFullBg={"#E7E2DA"}
         img1={JoinVebz}
         img2={''}
         heading={"Join Vibez today and start earning higher returns"}
