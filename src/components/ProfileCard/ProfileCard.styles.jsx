@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  width: 75%;
-  border-top-left-radius: 35%;
-  border-top-right-radius: 35%;
+
+  border-top-left-radius: 10000px;
+  border-top-right-radius: 10000px;
   position: relative;
     ::after {
     content: "";
@@ -15,8 +15,8 @@ top: -21px;
  border:20px solid #3a6c433b;
     box-sizing: content-box;
     left: -20px;
-    border-top-left-radius: 80%;
-    border-top-right-radius: 80%;
+    border-top-left-radius: 10000px;
+    border-top-right-radius: 10000px;
         border-bottom: 0;
     }
 `;
@@ -25,8 +25,8 @@ export const Image = styled.img`
   width: 100%;
   height: 350px;
   object-fit: cover;
-  border-top-left-radius: 90%;
-    border-top-right-radius: 90%;
+  border-top-left-radius: 10000px;
+    border-top-right-radius: 10000px;
 `;
 
 export const Body = styled.div`
@@ -41,7 +41,7 @@ font-size: 24px;
 leading-trim: NONE;
 line-height:1.2;
 letter-spacing: 0%;
-
+min-height: 57px;
 `;
 
 export const Content = styled.p`

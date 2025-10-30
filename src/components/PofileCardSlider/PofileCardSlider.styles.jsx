@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 export const SliderWrapper = styled.div`
   width: 100%;
-  padding: 60px 0 80px;
+  padding: 0 60px 0 80px;
   overflow: hidden;
   position: relative;
   display: flex
@@ -18,7 +18,11 @@ export const SliderWrapper = styled.div`
   }
 
     .slick-slider {
-        max-width:80vw;
+
+      .slick-slide.slick-active {
+    max-width: 32%;
+}
+        width: inherit;
         .slick-dots {
             bottom:12px !important;
             transform: translate(50%);

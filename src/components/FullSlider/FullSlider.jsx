@@ -47,23 +47,14 @@ export default function FullSlider() {
           button="Learn more"
         />
       </div>
-      <div index="2">
+      {/* <div index="2">
         <Banner
           image={BannerImg}
           title="Join the Vibez tribe"
           content="Your dream lifestyle starts here, with the coolest crew in town. Explore exclusive properties and investment opportunities."
-          button="Learn more 1"
+          button="Learn more"
         />
-      </div>
-      <div index="3">
-        <Banner
-          image="src/assets/home/banner1.webp"
-          title="Join the Vibez tribe"
-          content="Your dream lifestyle starts here, with the coolest crew in town. Explore exclusive properties and investment opportunities."
-          button="Learn more 2"
-        />
-      </div>
-    
+      </div> */}
     </Slider>
 
     </div>

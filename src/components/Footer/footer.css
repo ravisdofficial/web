@@ -39,10 +39,11 @@
 
         & div:nth-child(2) {
             & div {
-                margin: 30px;
+                                margin: 0;
+                margin-right: 10px;
             }
             & div:nth-child(2) {
-                margin-top: -85px;
+                margin-top: -115px;
             }
             & p {
                 display: flex;

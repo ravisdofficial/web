@@ -80,6 +80,7 @@
          font-weight: 400;
      }
      .leftCard {
+                margin-top: 20px;
          width: 100%;
          min-height: auto;
     }

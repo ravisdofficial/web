@@ -59,8 +59,8 @@
     margin: 0 auto;
     width: 60vw;
     height: 55%;
-    border-top-left-radius: 51%;
-    border-top-right-radius: 51%;
+    border-top-left-radius:10000px;
+    border-top-right-radius:10000px;
     overflow: hidden;
     padding-top: var(--pt);
 }
@@ -71,8 +71,8 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-top-left-radius: 51%;
-    border-top-right-radius: 51%;
+    border-top-left-radius:10000px;
+    border-top-right-radius:10000px;
 }
 
 .areaSection {
@@ -97,7 +97,7 @@
 
 @media (width <=800px) {
     .tomb-container {
-        height: 130vh;
+        height: 86vh;
     }
     
     .tomb__heading {
@@ -118,7 +118,7 @@
     
     .tombRectangle {
         width: 100vw;
-        height: 50%;
+        height: 400px;
     }
 
     .areaSection{
