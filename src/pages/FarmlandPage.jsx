@@ -17,7 +17,8 @@ import farmlandContact from '../assets/home/farmlandContact.jpg';
 import farm from '../assets/home/farm.png';
 import farm1 from '../assets/home/farm1.png';
 import farm2 from '../assets/home/farm2.png';
-
+import bannerImg from "../assets/home/banner4.webp";
+import subBanner from '../assets/home/banner4_farmland.webp'
 const amenitiesSectInfo = {
   heading: "Amenities That Grow With You",
   subHeading: "From crop selection, and planting to harvesting and marketing, we provide a comprehensive set of services.",
@@ -35,14 +36,14 @@ export default function FarmlandPage() {
   return (
     <>
       <Banner
-        image="src/assets/home/banner4.webp"
+        image={bannerImg}
         title="Embrace the bounty of the land"
         content="Discover the sustainable elegance of managed farmlands, where investment meets tranquility"
         button=""
         bgEffect={true}
       />
       <CommonSubBanner
-        image="src/assets/home/banner4_farmland.webp"
+        image={subBanner}
         title="Sustainable investments, serene living"
         content={`At Vibez Estates, we blend investment opportunities with a lifestyle enriched by nature. Our managed farmlands offer a unique chance to own and profit from agricultural land without the hassle of day-to-day management.`}
         boldContent={`Experience the peace of rural living, coupled with the perks of modern, sustainable practices.`}

@@ -21,6 +21,11 @@ export const SectionWrapper = styled.section`
     background: #f2efec;
     z-index: 0;
   }
+        @media (max-width: 1024px) {
+    &::before {
+    content: none;
+    }
+  }
 
   > * {
     position: relative;
@@ -81,12 +86,13 @@ export const ImageWrapper = styled.div`
     height: auto;
     max-height: 805px;
     object-fit: cover;
-    border-top-left-radius: 46%;
-    border-top-right-radius: 46%;
+    border-top-left-radius: 10000px;
+    border-top-right-radius: 10000px;
     transition: all 0.3s ease;
   }
 
   @media (max-width: 992px) {
+  display:none;
     img {
       max-width: 460px;
       max-height: 600px;
@@ -113,6 +119,12 @@ export const InfoWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 28px;
+
+  &>div {
+  @media (max-width: 992px) {
+  text-align:left;
+  }
+  }
 `;
 
 export const InfoItem = styled.div`
@@ -120,6 +132,10 @@ export const InfoItem = styled.div`
   align-items: flex-start;
   gap: 16px;
 
+  @media (max-width: 1024) {
+    justify-content: center;
+    text-align: left;
+  }
   @media (max-width: 768px) {
     justify-content: center;
     text-align: left;

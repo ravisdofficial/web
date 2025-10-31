@@ -26,6 +26,7 @@ import ProjectSlider from '../components/ProjectSilder/ProjectSlider';
 import CardOne from '../components/Card/CardOne';
 import projectDetailContact from '../assets/home/projectDetailContact.jpg';
 import LuxuryImg from '../assets/cards/luxury.webp';
+import bannerImg from '../assets/home/banner5.webp';
 
 const amenitiesSectInfo = {
   heading: "Amenities",
@@ -66,12 +67,13 @@ export default function ProjectDetails() {
   return (
     <>
       <Banner
-        image="src/assets/home/banner5.webp"
+        image={bannerImg}
         title="Kaira"
         content="Location: Sakleshpur"
         button="Status: Now Selling"
+        bgEffect={true}
       />
-      <Tombsection bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Kaira} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true} />
+      <Tombsection bgTheme="vector-leaf-left-right-v1" bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Kaira} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true} />
       <AmenitiesSection
         heading={amenitiesSectInfo.heading}
         subHeading={amenitiesSectInfo.subHeading}

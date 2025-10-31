@@ -43,7 +43,7 @@ const Header = () => {
         <nav className="hidden md:flex space-x-8 font-medium text-gray-700">
           <Link to="/about" className="hover:text-black-600 transition font-inter cursor-pointer">About Us</Link>
           <Link to="/farmland" className="flex flex-row hover:text-black-600 transition font-inter cursor-pointer">Managed Farmlands &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
-          <Link to="/project" className="flex flex-row hover:text-black-600 transition font-inter cursor-pointer">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
+          <Link to="/villa" className="flex flex-row hover:text-black-600 transition font-inter cursor-pointer">Luxury Villas &nbsp; <img src={ChevronDown} alt="Chevron Down" /></Link>
           <Link to="/revenue" className="hover:text-black-600 transition font-inter cursor-pointer">Revenue Generation</Link>
           {/* <Link to="/services" className="hover:text-black-600 transition">Services</Link>
           <Link to="/blog" className="hover:text-black-600 transition">Blog</Link> */}

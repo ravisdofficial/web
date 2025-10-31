@@ -4,12 +4,12 @@ import ChooseVibez from '../components/ChooseVibez/ChooseVibez';
 import AboutSection from '../components/ChooseVibez/AboutSection';
 import CardOne from '../components/Card/CardOne';
 import JoinVebz from '../assets/home/JoinVebz.jpg';
-
+import bannerImg from "../assets/home/banner6.webp"
 export default function RevenueDetail() {
   return (
     <>
       <Banner
-        image="src/assets/home/banner6.webp"
+        image={bannerImg}
         title="Earn higher returns with Vibez"
         content="Discover how Vibez Estates turns luxury living into a profitable venture with strategic revenue generation."
         button=""
