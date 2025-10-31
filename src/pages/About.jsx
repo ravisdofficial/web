@@ -15,7 +15,7 @@ import AwrdImg1 from '../assets/awards/award1.webp'
 import AwrdImg2 from '../assets/awards/award2.jpg'
 import AwrdImg3 from '../assets/awards/award3.webp'
 import AwrdImg4 from '../assets/awards/award4.jpg'
-
+import AboutBannerImg from '../assets/home/banner2.webp'
 export default function About() {
 
   const cardData = [
@@ -48,7 +48,7 @@ export default function About() {
   return (
     <>
       <Banner
-        image="src/assets/home/banner2.webp"
+        image={AboutBannerImg}
         title="Crafting Spaces, Enriching Lives"
         content="Dive into the world of Vibez Estates, where every property tells a story of luxury, sustainability, and innovation."
         button="Learn More"
