@@ -78,16 +78,16 @@ const Footer = () => {
           </div>
           <div className="othersCont py-5 flex flex-row">
             <div className="md:mx-[40px] flex flex-col font-inter text-left text-sm">
-              <FooterItem>About us</FooterItem>
-              <FooterItem>Managed Farmlands</FooterItem>
-              <FooterItem>Luxury Villas</FooterItem>
-              <FooterItem>Revenue Generation</FooterItem>
-              <FooterItem>Contact Us</FooterItem>
+              <FooterItem to="/about">About us</FooterItem>
+              <FooterItem to="/farmland">Managed Farmlands</FooterItem>
+              <FooterItem to="/villa">Luxury Villas</FooterItem>
+              <FooterItem to="/revenue">Revenue Generation</FooterItem>
+              <FooterItem to="/contact">Contact Us</FooterItem>
             </div>
             <div className="mx-2 flex flex-col font-inter text-left text-sm">
-              <FooterItem>Privacy Policy</FooterItem>
-              <FooterItem>Terms and Conditions</FooterItem>
-              <FooterItem>Disclaimer</FooterItem>
+              <FooterItem to="/">Privacy Policy</FooterItem>
+              <FooterItem to="/">Terms and Conditions</FooterItem>
+              <FooterItem to="/">Disclaimer</FooterItem>
             </div>
           </div>
         </div>

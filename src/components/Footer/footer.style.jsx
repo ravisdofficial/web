@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export const Container = styled.div`
     background-color: #DDD7CB;
     min-height: 450px;
@@ -31,7 +31,7 @@ export const Address = styled.p`
     font-weight: 400;
     `
 
-export const FooterItem = styled.p`
+export const FooterItem = styled(Link)`
     display: flex;
     margin-bottom: 18px;
     cursor: pointer;
