@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
-
+import bg from '../../assets/bgVector/leaferightfaded.png'
 export const SliderWrapper = styled.div`
 
 `;
@@ -188,7 +188,7 @@ export const SliderWrapperDiv = styled.div`
       background-size: contain;
   background-position: bottom left;
   background-repeat: no-repeat;
-  background: url('/src/assets/bgVector/leaferightfaded.png');
+  background: url(${bg});
   background-size: 66%;
     background-repeat: no-repeat;
     background-position: top right;

@@ -16,6 +16,9 @@ import villacontactSec from '../assets/home/villacontactSec.jpg';
 import star from '../assets/bgVector/star.png';
 import star_1 from '../assets/bgVector/star_1.png';
 import star_2 from '../assets/bgVector/star_2.png';
+import bannerImage from "../assets/home/banner3.webp"
+import subBannerImage from "../assets/home/banner3_villa.webp"
+
 
 const amenitiesSectInfo = {
   heading: "Amenities designed for the discerning",
@@ -31,13 +34,13 @@ export default function VillaContent() {
   return (
     <>
       <Banner
-        image="src/assets/home/banner3.webp"
+        image={bannerImage}
         title="Escape into elegance"
         content="Explore our prestigious villa and resort projects, where luxury meets serenity."
         button=""
       />
       <CommonSubBanner
-        image="src/assets/home/banner3_villa.webp"
+        image={subBannerImage}
         title="Redefining luxurious living"
         content={`At Vibez Estates, luxury is more than just an amenity—it's a way of life. Our exclusive villa and resort projects are designed for discerning individuals who seek tranquility, privacy, and the finest in modern comforts. Nestled in picturesque locations, each property offers a unique gateway to a more serene and indulgent lifestyle.`}
         amenitiesSectInfo={amenitiesSectInfo}
