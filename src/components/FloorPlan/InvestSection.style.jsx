@@ -4,8 +4,8 @@ export const SectionWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
-  background-color: #f9f7f3; /* page background */
+  padding-bottom: 60px;
+  background-color: #F2EFEC; /* page background */
 `;
 
 export const InvestBox = styled.div`

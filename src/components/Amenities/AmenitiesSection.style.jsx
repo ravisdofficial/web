@@ -61,7 +61,7 @@ export const AmenitiesGrid = styled.div`
 
   /* Responsive adjustments */
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
   }
 
   @media (max-width: 992px) {
@@ -69,6 +69,9 @@ export const AmenitiesGrid = styled.div`
   }
 
   @media (max-width: 576px) {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  @media (max-width: 420px) {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 `;

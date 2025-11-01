@@ -7,19 +7,24 @@
  }
 
  .leftCard {
-    min-height: 714px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+     min-height: 714px;
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     position: relative;
  }
 
  .rightCard {
      margin: auto;
      max-height: 714px;
-     padding: 0 100px;
+     padding: 0 65px;
+
+     @media (max-width:992px) {
+         padding: 0 40px;
+
+     }
  }
 
  .rightCard>img {
@@ -31,10 +36,9 @@
      width: 90%;
      max-width: 405px;
      height: 544px;
-     border: 2px solid black;
      border-top-left-radius: 1000000px;
      border-top-right-radius: 1000000px;
-     
+
  }
 
  .rectangle>img {
@@ -50,6 +54,11 @@
      font-size: 48px;
      font-weight: 400;
      text-transform: uppercase;
+
+     @media screen and (max-width: 992px) {
+         font-size: 36px;
+         line-height: 1.3;
+     }
  }
 
  .card__desc {
@@ -79,24 +88,25 @@
          font-size: 24px;
          font-weight: 400;
      }
+
      .leftCard {
-                margin-top: 20px;
+         padding-top: 20px;
          width: 100%;
          min-height: auto;
-    }
-    .rectangle{
-        position: relative;
-        width: 80%;
-        height: 60vh;
-        border: 2px solid black;
-        border-top-left-radius: 1000000px;
-        border-top-right-radius: 1000000px;
-    }
+     }
 
-    .rightCard{
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        padding: 50px;
-    }
-}
+     .rectangle {
+         position: relative;
+         width: 80%;
+         height: 60vh;
+         border-top-left-radius: 1000000px;
+         border-top-right-radius: 1000000px;
+     }
+
+     .rightCard {
+         margin: auto;
+         width: 100%;
+         height: 100%;
+         padding: 50px 25px;
+     }
+ }

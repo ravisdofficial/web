@@ -49,18 +49,18 @@ import ProjectImg3 from '../assets/sliderglobal/sliderCard3.webp'
  export const villaTestinmonials = [
     {
       id: 1,
-      title: 'Margaret Wilson',
-      content: 'Lorem Ipsum Company testimonials. See how our clients used our services to grow their businesses, expand their brands and increase their digital presence. Lorem Ipsum Company testimonials. See how our clients used our services.'
+      title: 'Nikitha Sharma',
+      content: 'I am really happy with the Kaira Plot, what they promised they have delivered it I had been in touch with sales person Bhava Krishna and Director Miss Shubha who explained me the project very well and till the time of registration they gave me a Proper Guidance with the legal team, I think I have made a Wise Choice Choosing Kaira, I would really suggest Kaira for those investment seekers.'
     },
     {
       id: 2,
-      title: 'Margaret Wilson',
-      content: 'Lorem Ipsum Company testimonials. See how our clients used our services to grow their businesses, expand their brands and increase their digital presence. Lorem Ipsum Company testimonials. See how our clients used our services.'
+      title: 'Daali Prajith',
+      content: 'Vibes Estate exceeded my expectations! Their team was professional, responsive, and guided me through the entire process. The property they helped me find was perfect, and I couldn`t be happier with my decision'
     },
     {
       id: 3,
-      title: 'Margaret Wilson 2',
-      content: 'Lorem Ipsum Company testimonials. See how our clients used our services to grow their businesses, expand their brands and increase their digital presence. Lorem Ipsum Company testimonials. See how our clients used our services.'
+      title: 'Ajay Baphna',
+      content: 'I have already Purched 2 Acres in Mythri farms at Chikkaballapur, Every week i receive the Plantation Updates...my Teak plantations are maintained perfectly i happy to see my teak plants so healthy and grown, Thanks to Vibez estates team for their efforts in keeping up their words true from the time of registration till now'
     }
   ];
 

@@ -10,11 +10,11 @@ import {
 
 const SliderCardItem = ({ image, title, subTitle = '', content, blur }) => {
   return (
-    <Card>
+    <Card className={blur && "top-content"}>
       {blur ? <BlurImg src={image} alt={title}/> :
         <Image src={image} alt={title} />
       }
-      <Body>
+      <Body className="content-body" >
         <Title>{title}</Title>
         {subTitle && <SubTitle>{subTitle}</SubTitle>}
         <Content>{content}</Content>

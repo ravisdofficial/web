@@ -115,6 +115,9 @@ letter-spacing: 0%;
 vertical-align: middle;
 text-transform: uppercase;
 color:white;
+@media (max-width:1024px){
+font-size: 20px;
+}
 `;
 
 export const Content = styled.p`

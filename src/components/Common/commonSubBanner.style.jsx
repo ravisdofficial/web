@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const BannerDiv = styled.div`
   width: 100%;
@@ -9,9 +9,8 @@ export const BannerDiv = styled.div`
   background: #fff;
 
   @media (max-width: 1024px) {
-    padding: 50px 0;
+    padding: 50px 0 0px;
   }
-
   @media (max-width: 768px) {
     padding: 40px 0;
   }
@@ -39,31 +38,29 @@ export const BannerContentWrapper = styled.div`
   }
 
   .image-div {
-   @media (max-width: 900px) {
-           margin: auto;
-  }
+    @media (max-width: 900px) {
+      margin: auto;
+    }
   }
 `;
 
 export const StyledImage = styled.img`
   height: 583px;
   width: 100%;
-   border-top-left-radius: 10000px;
-   border-top-right-radius: 10000px;
+  border-top-left-radius: 10000px;
+  border-top-right-radius: 10000px;
   object-fit: cover;
-  max-width:431px;
+  max-width: 431px;
   @media (max-width: 1024px) {
     height: 450px;
   }
 
   @media (max-width: 768px) {
     height: 340px;
-
   }
 
   @media (max-width: 480px) {
     height: 260px;
-   
   }
 `;
 
@@ -80,7 +77,7 @@ export const BannerTitle = styled.h2`
   vertical-align: middle;
   text-transform: uppercase;
   max-width: 757px;
-  margin:auto;
+  margin: auto;
   @media (max-width: 900px) {
     text-align: center;
   }

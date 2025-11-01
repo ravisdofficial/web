@@ -11,7 +11,7 @@ import { SericeSliderWrapper, TestimonialSliderWraper, ZigZagSliderWraper } from
 import ZigZagSlider from '../components/ZigZagSlider/ZigZagSlider';
 import zigZagBgimage from '../assets/farmland/bg1.jpg'
 import TestimonialSlider from '../components/TestimonialSlider/TestimonialSlider';
-import { servicesSliderData, villaTestinmonials, ProjectSliderData } from '../content/farmland';
+import { servicesSliderData, farmLandTestinmonials, ProjectSliderData } from '../content/farmland';
 import CardOne from '../components/Card/CardOne';
 import farmlandContact from '../assets/home/farmlandContact.jpg';
 import farm from '../assets/home/farm.png';
@@ -54,7 +54,7 @@ export default function FarmlandPage() {
       </SericeSliderWrapper>
       <TestimonialSliderWraper>
 
-        <TestimonialSlider cardData={villaTestinmonials} />
+        <TestimonialSlider cardData={farmLandTestinmonials}  sliderTitle="Hear from our satisfied clients"/>
       </TestimonialSliderWraper>
       <ZigZagSliderWraper>
         <ZigZagSlider cardData={ProjectSliderData} title="Explore farmland projects" bgImage={zigZagBgimage} />

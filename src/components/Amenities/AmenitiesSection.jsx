@@ -48,7 +48,7 @@ const AmenitiesSection = ({ heading, subHeading, amenitiesData}) => {
             </AmenityCard>
           ))}
         </AmenitiesGrid>
-        <ProjectSlider cardData={cardData} heading={"Gallery"} color={"#DDD7CB"}/>
+        {/* <ProjectSlider cardData={cardData} heading={"Gallery"} color={"#DDD7CB"}/> */}
       </ContentWrapper>
     </SectionWrapper>
   );

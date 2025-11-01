@@ -17,16 +17,17 @@ import FloorPlans from "../components/FloorPlan/Floorplan";
 import InvestSection from "../components/FloorPlan/InvestSection";
 import Tombsection from '/src/components/CommonSection/Tombsection';
 import Flower from '/src/assets/section2/flower.png';
-import Kaira from '/src/assets/home/kaira.png';
-import CardSlider from '../components//CardSlider/CardSlider';
-import SliderImage1 from '../assets/sliderglobal/sliderCard1.webp'
-import SliderImage2 from '../assets/sliderglobal/sliderCard2.webp'
-import SliderImage3 from '../assets/sliderglobal/sliderCard3.webp'
+import KairaImg from '/src/assets/home/kaira.png';
+import CardSlider from '../components/CardSlider/CardSlider';
+import SliderImage1 from '../assets/nearby/nearby1.webp'
+import SliderImage2 from '../assets/nearby/nearby2.webp'
+import SliderImage3 from '../assets/nearby/nearby3.webp'
 import ProjectSlider from '../components/ProjectSilder/ProjectSlider';
 import CardOne from '../components/Card/CardOne';
 import projectDetailContact from '../assets/home/projectDetailContact.jpg';
 import LuxuryImg from '../assets/cards/luxury.webp';
 import bannerImg from '../assets/home/banner5.webp';
+import { title } from "framer-motion/client";
 
 const amenitiesSectInfo = {
   heading: "Amenities",
@@ -47,20 +48,26 @@ const amenitiesSectInfo = {
   ],
 };
 
-export default function ProjectDetails() {
+export default function Kaira() {
 
     const cardData = [
     {
       id: 1,
-      image: SliderImage1
+      image: SliderImage1,
+      title:"36 km",
+      content: "Magajahalli Water Falls"
     },
     {
       id: 2,
-      image: SliderImage2
+      image: SliderImage2,
+      title:"",
+      content: "Bisile ghat view points"
     },
     {
       id: 3,
-      image: SliderImage3
+      image: SliderImage3,
+      title:"",
+      content: "Sakleshwara temple"
     }
   ];
 
@@ -73,17 +80,17 @@ export default function ProjectDetails() {
         button="Status: Now Selling"
         bgEffect={true}
       />
-      <Tombsection bgTheme="vector-leaf-left-right-v1" bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={Kaira} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true} />
+      <Tombsection bgTheme="vector-leaf-left-right-v1" bgColor={"#DDD7CB4D"} color={'black'} logo={Flower} imgSrc={KairaImg} heading={"Kaira — Embrace luxury living in nature's lap"} content={"Located in the picturesque town of Jannekere, Sakleshpur, Kaira offers a luxurious villa experience with an array of world-class amenities. Designed to provide comfort and elegance, Kaira is the perfect blend of modern living and natural beauty."} fontStyle={"font-poppins"} kaira={true} />
       <AmenitiesSection
         heading={amenitiesSectInfo.heading}
         subHeading={amenitiesSectInfo.subHeading}
         amenitiesData={amenitiesSectInfo.amenitiesData}
       />
       <FloorPlans />
-      <ProjectSlider heading={"NEARBY ATTRACTIONS"} cardData={cardData} color={"black"} bgColor={"#DDD7CB"}/>
+      <ProjectSlider heading={"NEARBY ATTRACTIONS"} cardData={cardData} color={"black"} bgColor={"#F2EFEC"}/>
       <InvestSection />
        <CardOne rev={false}
-        bgColor={"#E7EDEB"}
+        bgColor={"#DDD7CB"}
         bgColor2={"#134F3C"}
         img1={projectDetailContact}
         img2={LuxuryImg}

@@ -7,10 +7,13 @@ export const SliderWrapper = styled.div`
   padding: 0 60px 40px 80px;
   overflow: hidden;
   position: relative;
-  display: flex
-;
+  display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (width <=786px) {
+    padding: 0 16px 40px 16px;
+    }
     .slick-slide > div {
     display: flex;
     padding-top: 50px;

@@ -1,40 +1,44 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { SliderCardItemTitle,
-StyledSlider,
-Card,
-Image,
-Body,
-Title,
-Content, ArrowButtonRight, ArrowButtonLeft } from './ServicesSlider.styles';
-import RoudLeftArrow from '../../assets/sliderglobal/black-right-arrow.png';
-import RoudrightArrow from '../../assets/sliderglobal/black-right-arrow.png';
+import React from "react";
+import Slider from "react-slick";
+import {
+  SliderCardItemTitle,
+  StyledSlider,
+  Card,
+  Image,
+  Body,
+  Title,
+  Content,
+  ArrowButtonRight,
+  ArrowButtonLeft,
+} from "./ServicesSlider.styles";
+import RoudLeftArrow from "../../assets/sliderglobal/black-right-arrow.png";
+import RoudrightArrow from "../../assets/sliderglobal/black-right-arrow.png";
 
-export default function ServicesSlider({cardData}) {
-
-
-    function NextArrow(props) {
-      const { className, style, onClick } = props;
-      return (
-        <ArrowButtonLeft direction="left" onClick={onClick} ><img src={RoudLeftArrow}  alt="rightarror" /></ArrowButtonLeft>
-      );
-    }
-    function PrevArrow(props) {
-      const { className, style, onClick } = props;
-      return (
-          <ArrowButtonRight direction="right" onClick={onClick} ><img src={RoudrightArrow}  alt="rightarror" /> </ArrowButtonRight>
-        );
-      }
+export default function ServicesSlider({ cardData }) {
+  function PrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <ArrowButtonLeft direction="left" onClick={onClick}>
+        <img src={RoudLeftArrow} alt="rightarror" />
+      </ArrowButtonLeft>
+    );
+  }
+  function NextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <ArrowButtonRight direction="right" onClick={onClick}>
+        <img src={RoudrightArrow} alt="rightarror" />
+      </ArrowButtonRight>
+    );
+  }
   const settings = {
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
-
-
 
   const SliderCardItem = ({ title, content }) => {
     return (
@@ -49,13 +53,13 @@ export default function ServicesSlider({cardData}) {
 
   return (
     <>
-    <div className="slider-container">
-      <StyledSlider {...settings}>
-        {cardData.map((card) => (
-          <SliderCardItem title={card?.title} content={card?.content}/>
-        ))}
-      </StyledSlider>
-    </div>
-        </>
+      <div className="slider-container">
+        <StyledSlider {...settings}>
+          {cardData.map((card) => (
+            <SliderCardItem key={card?.id} title={card?.title} content={card?.content} />
+          ))}
+        </StyledSlider>
+      </div>
+    </>
   );
 }

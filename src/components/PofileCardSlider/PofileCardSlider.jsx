@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import ProfileCard from "../ProfileCard/ProfileCard";
 import shubhaImg from "../../assets/profile/shubha.webp";
@@ -13,6 +13,7 @@ import RoudLeftArrow from "../../assets/sliderglobal/rounded-left-arrow.png";
 import RoudrightArrow from "../../assets/sliderglobal/rounded-right-arrow.png";
 import TitleWithImage from "../TitleWithImage/TitleWithImage";
 import titleFlower from "../../assets/bgVector/mindTitle.png";
+
 const profileData = [
   {
     id: 1,
@@ -38,48 +39,53 @@ const profileData = [
 ];
 
 function PofileCardSlider() {
-  function NextArrow(props) {
-    const { className, style, onClick } = props;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  function NextArrow({ onClick }) {
     return (
-      <ArrowButtonLeft direction="left" onClick={onClick}>
-        <img src={RoudLeftArrow} alt="rightarror" />
+      <ArrowButtonLeft onClick={onClick}>
+        <img src={RoudLeftArrow} alt="left arrow" />
       </ArrowButtonLeft>
     );
   }
-  function PrevArrow(props) {
-    const { className, style, onClick } = props;
+
+  function PrevArrow({ onClick }) {
     return (
-      <ArrowButtonRight direction="right" onClick={onClick}>
-        <img src={RoudrightArrow} alt="rightarror" />{" "}
+      <ArrowButtonRight onClick={onClick}>
+        <img src={RoudrightArrow} alt="right arrow" />
       </ArrowButtonRight>
     );
   }
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow:
+      windowWidth >= 1024
+        ? 3
+        : windowWidth >= 768
+        ? 2 
+        : 1,
+    slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 768,
+        breakpoint: 1024, // below 1024px
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600, // below 600px
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -89,22 +95,22 @@ function PofileCardSlider() {
   };
 
   return (
-    < div className="pt-[60px]">
-      <TitleWithImage title={"Minds Behind the Mission"} image={titleFlower} />
-      <SliderWrapper>
+    <div className="pt-[60px]">
+      <TitleWithImage title="Minds Behind the Mission" image={titleFlower} />
+      <SliderWrapper key={windowWidth}>
+        {/* 👇 Key ensures re-render on resize */}
         <Slider {...settings}>
           {profileData.map((card) => (
             <ProfileCard
-              image={card?.image}
+              key={card.id}
+              image={card.image}
               title={card.title}
               subTitle={card.subtitle}
               content={card.content}
-              key={card.id}
             />
           ))}
         </Slider>
       </SliderWrapper>
-    
     </div>
   );
 }
